@@ -2,6 +2,7 @@ import { buildConfig } from 'payload/config';
 import path from 'path';
 import Users from './collections/Users';
 import Categories from "./collections/Categories";
+import Venues from "./collections/Venues";
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_URL,
@@ -10,6 +11,7 @@ export default buildConfig({
   },
   collections: [
       Users,
+      Venues,
       Categories
   ],
   typescript: {
