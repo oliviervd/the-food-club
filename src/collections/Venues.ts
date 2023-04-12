@@ -49,6 +49,30 @@ const Venues:CollectionConfig = {
         address,
         contentStatus,
         {
+            name: "status",
+            label: "part of the club?",
+            type: "select",
+            required: true,
+            admin: {
+                position: "sidebar",
+                description: "is this venue currently selected as member of the food club?"
+            },
+            options: [
+                {
+                    label: "yes",
+                    value: "yes"
+                },
+                {
+                    label: "alumni",
+                    value: "alumni"
+                },
+                {
+                    label: "no",
+                    value: "no"
+                }
+            ]
+        },
+        {
             name: "lastVisit",
             label: "date of last visit",
             type: "date",
