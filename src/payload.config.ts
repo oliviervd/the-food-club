@@ -4,6 +4,7 @@ import Users from './collections/Users';
 import Categories from "./collections/Categories";
 import Venues from "./collections/Venues";
 import Cuisine from "./collections/Cuisine";
+import Media from "./collections/Media";
 export default buildConfig({
   serverURL: process.env.PAYLOAD_URL,
   admin: {
@@ -13,7 +14,8 @@ export default buildConfig({
       Users,
       Venues,
       Categories,
-      Cuisine
+      Cuisine,
+      Media
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

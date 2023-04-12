@@ -47,6 +47,11 @@ const Venues:CollectionConfig = {
             type: "text"
         },
         review,
+        {
+            name: "media",
+            type: "relationship",
+            relationTo: "media"
+        },
         address,
         contentStatus,
         memberStatus,
