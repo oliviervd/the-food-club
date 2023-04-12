@@ -1,11 +1,14 @@
 import {CollectionConfig} from "payload/types";
+
 import address from "../fields/address";
 import cuisine from "../fields/cuisine";
+import contentStatus from "../fields/contentStatus";
+import pricing from "../fields/pricing";
+import review from "../fields/review";
+
 import {hasAccessOrPublished} from "../access/hasAccessOrPublished";
 import {isAdmin} from "../access/isAdmin";
 import {isEditor} from "../access/isEditor";
-import contentStatus from "../fields/contentStatus";
-import pricing from "../fields/pricing";
 
 const Venues:CollectionConfig = {
     slug: "venue",
@@ -43,6 +46,7 @@ const Venues:CollectionConfig = {
             type: "text"
         },
         address,
+        review,
         contentStatus,
         {
             name: "lastVisit",
