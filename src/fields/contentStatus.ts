@@ -6,6 +6,9 @@ const contentStatus: Field = {
     type: "select",
     required: true,
     defaultValue: ["draft"],
+    admin: {
+        position: "sidebar"
+    },
     options: [
         {
             value:"draft",
