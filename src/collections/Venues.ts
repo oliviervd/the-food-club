@@ -5,6 +5,7 @@ import cuisine from "../fields/cuisine";
 import contentStatus from "../fields/contentStatus";
 import pricing from "../fields/pricing";
 import review from "../fields/review";
+import memberStatus from "../fields/memberStatus";
 
 import {hasAccessOrPublished} from "../access/hasAccessOrPublished";
 import {isAdmin} from "../access/isAdmin";
@@ -48,29 +49,15 @@ const Venues:CollectionConfig = {
         review,
         address,
         contentStatus,
+        memberStatus,
         {
-            name: "status",
-            label: "part of the club?",
-            type: "select",
-            required: true,
+            name:"toVisit",
+            label: "to visit",
             admin: {
                 position: "sidebar",
-                description: "is this venue currently selected as member of the food club?"
+                description: "venue that needs to be visited by the foodclub."
             },
-            options: [
-                {
-                    label: "yes",
-                    value: "yes"
-                },
-                {
-                    label: "alumni",
-                    value: "alumni"
-                },
-                {
-                    label: "no",
-                    value: "no"
-                }
-            ]
+            type: "checkbox"
         },
         {
             name: "lastVisit",
