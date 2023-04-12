@@ -3,6 +3,7 @@ import path from 'path';
 import Users from './collections/Users';
 import Categories from "./collections/Categories";
 import Venues from "./collections/Venues";
+import Cuisine from "./collections/cuisine";
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_URL,
@@ -12,7 +13,8 @@ export default buildConfig({
   collections: [
       Users,
       Venues,
-      Categories
+      Categories,
+      Cuisine
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

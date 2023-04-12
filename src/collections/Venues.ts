@@ -1,5 +1,6 @@
 import {CollectionConfig} from "payload/types";
 import address from "../fields/address";
+import cuisine from "../fields/cuisine";
 import {hasAccessOrPublished} from "../access/hasAccessOrPublished";
 import {isAdmin} from "../access/isAdmin";
 import {isEditor} from "../access/isEditor";
@@ -29,6 +30,7 @@ const Venues:CollectionConfig = {
             relationTo: "categories",
         },
         address,
+        cuisine,
         contentStatus
     ]
 }
