@@ -1,6 +1,7 @@
 import { buildConfig } from 'payload/config';
 import path from 'path';
 import Users from './collections/Users';
+import Categories from "./collections/Categories";
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_URL,
@@ -8,7 +9,8 @@ export default buildConfig({
     user: Users.slug,
   },
   collections: [
-    Users,
+      Users,
+      Categories
   ],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
