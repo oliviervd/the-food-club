@@ -23,7 +23,7 @@ const Media:CollectionConfig = {
             type: "text"
         },
         {
-            name: "credits",
+            name: "dish",
             type: "text"
         },
         contentStatus

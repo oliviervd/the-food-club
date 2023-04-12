@@ -46,13 +46,25 @@ const Venues:CollectionConfig = {
             label: "website",
             type: "text"
         },
-        review,
+        {
+            label: "review",
+            type: "collapsible",
+            fields: [
+                review
+            ]
+        },
         {
             name: "media",
             type: "relationship",
             relationTo: "media"
         },
-        address,
+        {
+            label: "location",
+            type:"collapsible",
+            fields:[
+                address,
+            ]
+        },
         contentStatus,
         memberStatus,
         {
