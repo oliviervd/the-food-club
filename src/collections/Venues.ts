@@ -5,6 +5,7 @@ import {hasAccessOrPublished} from "../access/hasAccessOrPublished";
 import {isAdmin} from "../access/isAdmin";
 import {isEditor} from "../access/isEditor";
 import contentStatus from "../fields/contentStatus";
+import pricing from "../fields/pricing";
 
 const Venues:CollectionConfig = {
     slug: "venue",
@@ -24,16 +25,22 @@ const Venues:CollectionConfig = {
             type: "text",
             required: true
         },
-        cuisine,
+        {
+            type: "row",
+            fields: [
+                cuisine,
+                pricing,
+                {
+                    name: "category",
+                    type: "relationship",
+                    relationTo: "categories",
+                },
+            ]
+        },
         {
             name: "website",
             label: "website",
             type: "text"
-        },
-        {
-            name: "category",
-            type: "relationship",
-            relationTo: "categories",
         },
         address,
         contentStatus,
