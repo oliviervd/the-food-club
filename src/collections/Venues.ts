@@ -23,7 +23,7 @@ const Venues:CollectionConfig = {
             type: "text",
             required: true
         },
-        address,
+        //address,
         contentStatus
     ]
 }
