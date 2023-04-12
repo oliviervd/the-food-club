@@ -45,8 +45,8 @@ const Venues:CollectionConfig = {
             label: "website",
             type: "text"
         },
-        address,
         review,
+        address,
         contentStatus,
         {
             name: "lastVisit",
@@ -54,6 +54,14 @@ const Venues:CollectionConfig = {
             type: "date",
             admin: {
                 position: "sidebar",
+            }
+        },
+        {
+            name: 'notes',
+            label: "notes",
+            type: "richText",
+            admin: {
+                position: "sidebar"
             }
         }
     ]
