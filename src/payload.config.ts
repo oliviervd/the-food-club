@@ -4,7 +4,6 @@ import Users from './collections/Users';
 import Categories from "./collections/Categories";
 import Venues from "./collections/Venues";
 import Cuisine from "./collections/cuisine";
-
 export default buildConfig({
   serverURL: process.env.PAYLOAD_URL,
   admin: {
