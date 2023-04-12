@@ -8,27 +8,27 @@ const address: Field = {
             name: "street",
             label: "street",
             type: "text",
-            required: true
+            //required: true
         },
         {
             name: "houseNumber",
             label: "house number",
             type: "text",
-            required: true
+            //required: true
         },
         {
             name: "city",
             label: "city",
             type: "text",
-            required: true,
-            defaultValue: ["Gent"]
+            //required: true,
+            //defaultValue: ["Gent"]
         },
         {
             name: "postalCode",
             label: "postal code",
             type: "text",
-            required: true,
-            defaultValue: ["9000"]
+            //required: true,
+            //defaultValue: ["9000"]
         }
     ]
 }
