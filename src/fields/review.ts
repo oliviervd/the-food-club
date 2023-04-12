@@ -5,14 +5,19 @@ const review: Field = {
         label: "reviews",
     type: "group",
     fields: [
-    {
-        name: "reviewEN",
-        type: "richText"
-    },
-    {
-        name: "reviewNL",
-        type: "richText"
-    }
+        {
+            name: "reviewEN",
+            type: "richText"
+        },
+        {
+            name: "reviewNL",
+            type: "richText"
+        },
+        {
+            name: "author",
+            type: "relationship",
+            relationTo: "users"
+        }
     ]
 }
 
