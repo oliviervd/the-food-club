@@ -38,7 +38,7 @@ const Venues:CollectionConfig = {
         address,
         contentStatus,
         {
-            name: "last visit",
+            name: "lastVisit",
             label: "date of last visit",
             type: "date",
             admin: {
