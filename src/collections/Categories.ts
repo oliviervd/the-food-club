@@ -7,7 +7,8 @@ import contentStatus from "../fields/contentStatus";
 const Categories:CollectionConfig = {
     slug: "categories",
     admin: {
-        useAsTitle: "category"
+        useAsTitle: "category",
+        description: "category to which the venue belongs (categories used to cluster in the app)"
     },
     access: {
         update: isEditor,
