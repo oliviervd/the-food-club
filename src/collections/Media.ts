@@ -23,11 +23,6 @@ const Media:CollectionConfig = {
             type: "text"
         },
         {
-            name: "depicts",
-            type: "relationship",
-            relationTo: "venues"
-        },
-        {
             name: "credits",
             type: "text"
         },
