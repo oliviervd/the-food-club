@@ -25,7 +25,7 @@ const Media:CollectionConfig = {
         {
             name: "depicts",
             type: "relationship",
-            relationTo: "Venues"
+            relationTo: "venues"
         },
         {
             name: "credits",
