@@ -24,14 +24,27 @@ const Venues:CollectionConfig = {
             type: "text",
             required: true
         },
+        cuisine,
+        {
+            name: "website",
+            label: "website",
+            type: "text"
+        },
         {
             name: "category",
             type: "relationship",
             relationTo: "categories",
         },
         address,
-        cuisine,
-        contentStatus
+        contentStatus,
+        {
+            name: "last visit",
+            label: "date of last visit",
+            type: "date",
+            admin: {
+                position: "sidebar",
+            }
+        }
     ]
 }
 export default Venues
