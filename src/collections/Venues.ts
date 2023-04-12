@@ -23,9 +23,8 @@ const Venues:CollectionConfig = {
             type: "text",
             required: true
         },
-        //address,
+        address,
         contentStatus
     ]
 }
-
 export default Venues

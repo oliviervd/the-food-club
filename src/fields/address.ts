@@ -1,7 +1,9 @@
 import {Field} from "payload/types";
 
 const address: Field = {
-    type: "row",
+    name: "address",
+    label: "address",
+    type: "group",
     fields: [
         {
             name: "street",
