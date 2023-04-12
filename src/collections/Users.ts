@@ -8,6 +8,8 @@ const Users: CollectionConfig = {
   },
   access: {
     read: () => true,
+    update: () => true,
+    create: () => true
   },
   fields: [
     {
@@ -16,7 +18,7 @@ const Users: CollectionConfig = {
         {
           name:'firstName',
           type:'text',
-          label:'firs name'
+          label:'first name'
         },
         {
           name:'lastName',
@@ -29,6 +31,7 @@ const Users: CollectionConfig = {
       name: 'roles',
       type: 'select',
       hasMany: true,
+      saveToJWT: true,
       defaultValue: ['user'],
       options: [
         {
