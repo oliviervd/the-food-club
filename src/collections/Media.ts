@@ -4,6 +4,7 @@ import {isEditor} from "../access/isEditor";
 import {isAdmin} from "../access/isAdmin";
 import {hasAccessOrPublished} from "../access/hasAccessOrPublished";
 import contentStatus from "../fields/contentStatus";
+import notes from "../fields/notes";
 
 const Media:CollectionConfig = {
     slug: "media",
@@ -26,7 +27,8 @@ const Media:CollectionConfig = {
             name: "dish",
             type: "text"
         },
-        contentStatus
+        contentStatus,
+        notes
     ]
 }
 

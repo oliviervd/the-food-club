@@ -6,6 +6,7 @@ import contentStatus from "../fields/contentStatus";
 import pricing from "../fields/pricing";
 import review from "../fields/review";
 import memberStatus from "../fields/memberStatus";
+import notes from "../fields/notes";
 
 import {hasAccessOrPublished} from "../access/hasAccessOrPublished";
 import {isAdmin} from "../access/isAdmin";
@@ -72,14 +73,7 @@ const Venues:CollectionConfig = {
                 position: "sidebar",
             }
         },
-        {
-            name: 'notes',
-            label: "notes",
-            type: "richText",
-            admin: {
-                position: "sidebar"
-            }
-        }
+        notes
     ]
 }
 export default Venues

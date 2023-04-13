@@ -1,4 +1,5 @@
 import {CollectionConfig} from "payload/types";
+import notes from "../fields/notes";
 
 const Cuisine: CollectionConfig = {
     slug: "cuisine",
@@ -7,7 +8,8 @@ const Cuisine: CollectionConfig = {
             name: "name",
             type: "text",
             required:true
-        }
+        },
+        notes
     ]
 }
 

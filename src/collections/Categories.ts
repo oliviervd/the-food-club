@@ -3,6 +3,7 @@ import {isEditor} from "../access/isEditor";
 import {isAdmin} from "../access/isAdmin";
 import {hasAccessOrPublished} from "../access/hasAccessOrPublished";
 import contentStatus from "../fields/contentStatus";
+import notes from "../fields/notes";
 
 const Categories:CollectionConfig = {
     slug: "categories",
@@ -55,7 +56,8 @@ const Categories:CollectionConfig = {
             type: "relationship",
             relationTo: "media"
         },
-        contentStatus
+        contentStatus,
+        notes
     ]
 }
 
