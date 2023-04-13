@@ -8,7 +8,7 @@ const Categories:CollectionConfig = {
     slug: "categories",
     admin: {
         useAsTitle: "category",
-        description: "category to which the venue belongs (categories used to cluster in the app)"
+        description: "category to which the venue belongs (categories used to cluster - and main guidelines through the app)"
     },
     access: {
         update: isEditor,
@@ -20,7 +20,32 @@ const Categories:CollectionConfig = {
         {
             name: "category",
             label: "category",
-            type: "text"
+            type: "text",
+            required: true,
+        },
+        {
+            type: "row",
+            fields: [
+                {
+                    name: "briefEN",
+                    label: "brief description (English)",
+                    type: "text",
+                },
+                {
+                    name: "briefNL",
+                    label: "brief description (Dutch)",
+                    type: "text",
+                }
+            ]
+        },
+        {
+            name: "image",
+            label: "image",
+            admin: {
+              description: "image/illustration used to depict the category"
+            },
+            type: "relationship",
+            relationTo: "media"
         },
         contentStatus
     ]
