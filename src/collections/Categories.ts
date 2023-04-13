@@ -18,10 +18,18 @@ const Categories:CollectionConfig = {
     },
     fields: [
         {
-            name: "category",
-            label: "category",
+            name: "categoryTitle",
+            label: "category title",
             type: "text",
             required: true,
+        },
+        {
+            name: "categorySubTitle",
+            label: "category subtitle",
+            type: "text",
+            admin: {
+                description: "catchphrase that goes along with the title, a slur of sorts."
+            }
         },
         {
             type: "row",
