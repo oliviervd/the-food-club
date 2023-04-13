@@ -29,12 +29,12 @@ const Categories:CollectionConfig = {
                 {
                     name: "briefEN",
                     label: "brief description (English)",
-                    type: "text",
+                    type: "richText",
                 },
                 {
                     name: "briefNL",
                     label: "brief description (Dutch)",
-                    type: "text",
+                    type: "richText",
                 }
             ]
         },
