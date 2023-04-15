@@ -39,8 +39,8 @@ const Users: CollectionConfig = {
       saveToJWT: true,
       defaultValue: ['user'],
       access: {
-        create: isAdminFieldLevel,
-        update: isAdminFieldLevel
+        //create: isAdminFieldLevel,
+        //update: isAdminFieldLevel
       },
       options: [
         {
