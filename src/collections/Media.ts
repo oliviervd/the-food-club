@@ -13,7 +13,7 @@ const Media:CollectionConfig = {
         staticURL: "/media"
     },
     access: {
-        create: isEditor,
+        create: ()=>true,
         delete: isAdmin,
         read: hasAccessOrPublished,
         update:isEditor

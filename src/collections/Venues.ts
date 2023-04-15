@@ -19,7 +19,7 @@ const Venues:CollectionConfig = {
     },
     access: {
         read: hasAccessOrPublished,
-        create: isEditor,
+        create: ()=>true,
         update: isEditor,
         delete: isAdmin
     },

@@ -14,7 +14,7 @@ const Categories:CollectionConfig = {
     access: {
         update: isEditor,
         delete: isAdmin,
-        create: isAdmin,
+        create: ()=>true,
         read: hasAccessOrPublished
     },
     fields: [
