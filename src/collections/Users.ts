@@ -12,7 +12,7 @@ const Users: CollectionConfig = {
   },
   access: {
     read: isAdminOrSelf,
-    update: isAdminOrSelf,
+    update: ()=> true,
     create: ()=> true,
     delete: isAdmin
   },
