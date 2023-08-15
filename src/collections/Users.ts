@@ -11,11 +11,10 @@ const Users: CollectionConfig = {
     useAsTitle: 'email',
   },
   access: {
-    read: ()=>true,
     update: ()=> true,
     create: ()=> true,
-    //read: isAdminOrSelf,
-    //delete: isAdmin
+    read: isAdminOrSelf,
+    delete: isAdmin
   },
   fields: [
     {
