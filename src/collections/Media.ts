@@ -9,13 +9,13 @@ import notes from "../fields/notes";
 const Media:CollectionConfig = {
     slug: "media",
     upload : {
-        staticDir: path.resolve(__dirname, "../../media"),
+        staticDir: "media",
         staticURL: "/media"
     },
     access: {
         create: ()=>true,
         delete: isAdmin,
-        read: hasAccessOrPublished,
+        read: ()=> true,
         update:isEditor
     },
     fields:[

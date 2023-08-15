@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../cms-studios/.idea/cms-studios.iml" filepath="$PROJECT_DIR$/../cms-studios/.idea/cms-studios.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/the-food-club.iml" filepath="$PROJECT_DIR$/.idea/the-food-club.iml" />
     </modules>
   </component>
