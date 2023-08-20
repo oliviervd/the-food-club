@@ -3,6 +3,9 @@ import notes from "../fields/notes";
 
 const Cuisine: CollectionConfig = {
     slug: "cuisine",
+    admin: {
+        useAsTitle: "name"
+    },
     fields: [
         {
             name: "name",
