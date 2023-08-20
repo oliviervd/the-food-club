@@ -29,6 +29,16 @@ const address: Field = {
             type: "text",
             //required: true,
             //defaultValue: ["9000"]
+        },
+        {
+            name: "longitude",
+            label: "longitude",
+            type: "number"
+        },
+        {
+            name: "latitude",
+            label: "latitude",
+            type: "number"
         }
     ]
 }
