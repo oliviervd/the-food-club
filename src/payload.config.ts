@@ -34,14 +34,14 @@ export default buildConfig({
     serverURL: process.env.PAYLOAD_URL,
     //CORS
     cors: [
-        'https://the-food-club-front.vercel.app/',
+        'https://the-food-club-front.vercel.app',
         'http://localhost:3000',
         'https://p01--cms--2y8cq25kbv7n.code.run/',
         'vitals.vercel-insights.com'
     ],
     //CSRF
     csrf: [
-        'https://the-food-club-front.vercel.app/',
+        'https://the-food-club-front.vercel.app',
         'http://localhost:3000',
         'https://p01--cms--2y8cq25kbv7n.code.run/',
         'vitals.vercel-insights.com'
