@@ -8,7 +8,7 @@ import notes from "../fields/notes";
 const Categories:CollectionConfig = {
     slug: "categories",
     admin: {
-        useAsTitle: "category",
+        useAsTitle: "categoryTitle",
         description: "category to which the venue belongs (categories used to cluster - and main guidelines through the app)"
     },
     access: {
