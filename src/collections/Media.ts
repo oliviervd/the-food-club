@@ -5,16 +5,16 @@ import {isAdmin} from "../access/isAdmin";
 import contentStatus from "../fields/contentStatus";
 import notes from "../fields/notes";
 
+
 const Media:CollectionConfig = {
     slug: "media",
     upload: {
-        staticURL: "/media",
+        staticURL: '/media',
+        staticDir: 'media',
+        disableLocalStorage: true
     },
     access: {
-        create: ()=>true,
-        delete: isAdmin,
         read: ()=> true,
-        update:isEditor
     },
     fields:[
         {
