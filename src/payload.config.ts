@@ -10,19 +10,6 @@ import Venues from "./collections/Venues";
 import Cuisine from "./collections/Cuisine";
 import Media from "./collections/Media";
 
-const adapter = s3Adapter({
-    config: {
-        forcePathStyle: true,
-        region: process.env.S3_REGION,
-        endpoint: process.env.S3_ENDPOINT,
-        credentials: {
-            accessKeyId: process.env.S3_ACCESS_KEY_ID,
-            secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
-        }
-    },
-    bucket: process.env.S3_BUCKET,
-})
-
 export default buildConfig({
     // S3 adapter
     serverURL: process.env.PAYLOAD_URL,
@@ -30,10 +17,18 @@ export default buildConfig({
         cloudStorage({
             collections: {
                 'media': {
-                    adapter, // see docs for the adapter you want to use
-                    disablePayloadAccessControl: true,
-                    // generateFileURL: (args) => process.env.S3_ENDPOINT + "/" + args.filename
-                },
+                    adapter: s3Adapter({
+                        config: {
+                            endpoint: process.env.S3_ENDPOINT,
+                            region: process.env.S3_REGION,
+                            credentials: {
+                                accessKeyId: process.env.S3_ACCESS_KEY_ID,
+                                secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+                            },
+                        },
+                        bucket: process.env.S3_BUCKET,
+                    }),
+                }
             },
         }),
     ],
