@@ -8,9 +8,10 @@ import notes from "../fields/notes";
 
 const Media:CollectionConfig = {
     slug: "media",
-    upload : {
-        staticDir: "media",
-        staticURL: "/media"
+    upload: {
+        staticDir: path.resolve(__dirname, "../../media"),
+        staticURL: "/media",
+        disableLocalStorage: true
     },
     access: {
         create: ()=>true,
