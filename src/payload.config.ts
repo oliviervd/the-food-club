@@ -11,7 +11,7 @@ import Cuisine from "./collections/Cuisine";
 import Media from "./collections/Media";
 
 export default buildConfig({
-    // // S3 adapter
+    // S3 adapter
     //
     // plugins: [
     //     cloudStorage({
