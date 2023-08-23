@@ -12,6 +12,7 @@ import Media from "./collections/Media";
 
 export default buildConfig({
     // S3 adapter
+    serverURL: process.env.PAYLOAD_URL,
     plugins: [
         cloudStorage({
             collections: {
@@ -31,7 +32,6 @@ export default buildConfig({
             }
         })
     ],
-    serverURL: process.env.PAYLOAD_URL,
     //CORS
     cors: [
         'https://the-food-club-front.vercel.app',
