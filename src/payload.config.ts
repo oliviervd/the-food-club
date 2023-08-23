@@ -37,14 +37,14 @@ export default buildConfig({
     cors: [
         'https://the-food-club-front.vercel.app',
         'http://localhost:3000',
-        'https://p01--cms--2y8cq25kbv7n.code.run/',
+        'https://p01--cms--j4bvc8vdjtjb.code.run/',
         'vitals.vercel-insights.com'
     ],
     //CSRF
     csrf: [
         'https://the-food-club-front.vercel.app',
         'http://localhost:3000',
-        'https://p01--cms--2y8cq25kbv7n.code.run/',
+        'https://p01--cms--j4bvc8vdjtjb.code.run/',
         'vitals.vercel-insights.com'
     ],
     admin: {
