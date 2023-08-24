@@ -2,7 +2,6 @@ import {buildConfig} from 'payload/config';
 import {cloudStorage} from "@payloadcms/plugin-cloud-storage";
 import {s3Adapter} from "@payloadcms/plugin-cloud-storage/s3";
 
-
 import path from 'path';
 import Users from './collections/Users';
 import Categories from "./collections/Categories";
