@@ -12,25 +12,25 @@ import Media from "./collections/Media";
 export default buildConfig({
     // S3 adapter
     //
-    // plugins: [
-    //     cloudStorage({
-    //         collections: {
-    //             'media': {
-    //                 adapter: s3Adapter({
-    //                     config: {
-    //                         endpoint: process.env.S3_ENDPOINT,
-    //                         region: process.env.S3_REGION,
-    //                         credentials: {
-    //                             accessKeyId: process.env.S3_ACCESS_KEY_ID,
-    //                             secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
-    //                         },
-    //                     },
-    //                     bucket: process.env.S3_BUCKET,
-    //                 }),
-    //             }
-    //         },
-    //     }),
-    // ],
+    plugins: [
+        cloudStorage({
+            collections: {
+                'media': {
+                    adapter: s3Adapter({
+                        config: {
+                            endpoint: process.env.S3_ENDPOINT,
+                            region: process.env.S3_REGION,
+                            credentials: {
+                                accessKeyId: process.env.S3_ACCESS_KEY_ID,
+                                secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+                            },
+                        },
+                        bucket: process.env.S3_BUCKET,
+                    }),
+                }
+            },
+        }),
+    ],
     serverURL: process.env.PAYLOAD_URL,
     //CORS
     cors: [
