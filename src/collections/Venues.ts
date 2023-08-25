@@ -14,6 +14,7 @@ import {isEditor} from "../access/isEditor";
 import catchPhrase from "../fields/catchPhrase";
 import occasion from "../fields/type";
 import openingHours from "../fields/openingHours";
+import Category from "../fields/category";
 
 const Venues:CollectionConfig = {
     slug: "venue",
@@ -37,12 +38,7 @@ const Venues:CollectionConfig = {
             type: "row",
             fields: [
                 cuisine,
-                {
-                    name: "category",
-                    hasMany: true,
-                    type: "relationship",
-                    relationTo: "categories",
-                },
+                Category
             ]
         },
         {
