@@ -56,6 +56,10 @@ const Venues:CollectionConfig = {
         catchPhrase,
         review,
         {
+          name: "clubOrder",
+          type: 'richText'
+        },
+        {
             name: "media",
             type: "relationship",
             relationTo: "media"
