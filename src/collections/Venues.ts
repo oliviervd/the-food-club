@@ -38,7 +38,7 @@ const Venues:CollectionConfig = {
             type: "row",
             fields: [
                 cuisine,
-                Category
+                category
             ]
         },
         {

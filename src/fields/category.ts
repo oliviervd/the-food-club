@@ -2,7 +2,7 @@ import {Field} from "payload/types";
 import {isEditor} from "../access/isEditor";
 import {isAdmin} from "../access/isAdmin";
 
-const Category:Field = {
+const category:Field = {
     name: "category",
     label: "categorie(s)",
     admin: {
@@ -16,4 +16,4 @@ const Category:Field = {
     relationTo: "categories"
 
 }
-export default Category
+export default category
