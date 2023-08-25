@@ -37,12 +37,17 @@ const Venues:CollectionConfig = {
             type: "row",
             fields: [
                 cuisine,
-                pricing,
                 {
                     name: "category",
                     type: "relationship",
                     relationTo: "categories",
                 },
+            ]
+        },
+        {
+            type:"row",
+            fields: [
+                pricing,
                 occasion
             ]
         },
