@@ -8,14 +8,14 @@ import notes from "../fields/notes";
 const Categories:CollectionConfig = {
     slug: "categories",
     admin: {
-        useAsTitle: "name",
+        useAsTitle: "categoryTitle",
     },
     access: {
         read: ()=> true,
     },
     fields: [
         {
-            name: "name",
+            name: "categoryTitle",
             label: "category title",
             type: "text",
             required: true,
