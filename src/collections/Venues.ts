@@ -39,6 +39,7 @@ const Venues:CollectionConfig = {
                 cuisine,
                 {
                     name: "category",
+                    hasMany: true,
                     type: "relationship",
                     relationTo: "categories",
                 },
