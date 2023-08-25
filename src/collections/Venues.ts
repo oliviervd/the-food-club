@@ -14,7 +14,7 @@ import {isEditor} from "../access/isEditor";
 import catchPhrase from "../fields/catchPhrase";
 import occasion from "../fields/type";
 import openingHours from "../fields/openingHours";
-import Category from "../fields/category";
+import category from "../fields/category";
 
 const Venues:CollectionConfig = {
     slug: "venue",
