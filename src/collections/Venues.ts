@@ -11,6 +11,7 @@ import notes from "../fields/notes";
 import {hasAccessOrPublished} from "../access/hasAccessOrPublished";
 import {isAdmin} from "../access/isAdmin";
 import {isEditor} from "../access/isEditor";
+import catchPhrase from "../fields/catchPhrase";
 
 const Venues:CollectionConfig = {
     slug: "venue",
@@ -47,6 +48,7 @@ const Venues:CollectionConfig = {
             label: "website",
             type: "text"
         },
+        catchPhrase,
         review,
         {
             name: "media",
