@@ -8,7 +8,8 @@ const cuisine:Field = {
     },
     type: "relationship",
     hasMany: true,
-    relationTo: "cuisine"
+    relationTo: "cuisine",
+    required: true
 }
 
 export default cuisine

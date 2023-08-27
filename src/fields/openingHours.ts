@@ -4,6 +4,7 @@ const openingHours: Field = {
     name: "openOn",
     type: "select",
     hasMany: true,
+    required: true,
     options: [
         {
             value: "Mo",

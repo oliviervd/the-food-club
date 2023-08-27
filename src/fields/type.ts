@@ -4,6 +4,7 @@ const occasion: Field = {
     name: "type",
     type: "select",
     hasMany: true,
+    required: true,
     //todo: make these for different languages
     options: [
         {
@@ -21,6 +22,14 @@ const occasion: Field = {
         {
             value: "dinner",
             label: "dinner"
+        },
+        {
+            value: "market",
+            label: "market"
+        },
+        {
+            value: "bar",
+            label: "bar"
         }
     ]
 }
