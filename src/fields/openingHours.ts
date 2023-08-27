@@ -5,6 +5,7 @@ const openingHours: Field = {
     type: "select",
     hasMany: true,
     required: true,
+    defaultValue: "UNDEFINED",
     options: [
         {
             value: "Mo",
@@ -34,6 +35,10 @@ const openingHours: Field = {
             value: "Sun",
             label: "Sunday"
         },
+        {
+            value: "UNDEFINED",
+            label: "UNDEFINED"
+        }
     ]
 }
 
