@@ -66,6 +66,14 @@ const Venues:CollectionConfig = {
         },
         openingHours,
         address,
+        {
+            name: "warning",
+            type: "text",
+            label: "warning",
+            admin: {
+                description: "if visiting, make sure to take into account the following:.."
+            }
+        },
         contentStatus,
         memberStatus,
         {
