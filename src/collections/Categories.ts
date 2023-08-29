@@ -18,7 +18,7 @@ const Categories:CollectionConfig = {
             name: "categoryTitle",
             label: "category title",
             type: "text",
-            required: true,
+            required: false,
         },
         {
             name: "categorySubTitle",
