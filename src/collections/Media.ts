@@ -34,12 +34,20 @@ const Media:CollectionConfig = {
     },
     fields:[
         {
+            name: "title",
+            type: "text",
+            required: true
+        },
+        {
             name: "alt",
             type: "text"
         },
         {
             name: "dish",
-            type: "text"
+            type: "text",
+            admin: {
+                description: "if a picture of  a dish on the menu, describe the dish in one or two sentences. Keep it short! "
+            }
         },
         contentStatus,
         notes
