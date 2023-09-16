@@ -77,6 +77,26 @@ const Venues:CollectionConfig = {
         contentStatus,
         memberStatus,
         {
+            name: 'vegetarian',
+            label: 'vegetarian friendly?',
+            type: "checkbox",
+            defaultValue: false,
+            admin: {
+                position: "sidebar",
+                description: "does this venue offer vegetarian menu?"
+            },
+        },
+        {
+            name: 'vegan',
+            label: 'vegan friendly?',
+            type: "checkbox",
+            defaultValue: false,
+            admin: {
+                position: "sidebar",
+                description: "does this venue offer vegan menu?"
+            },
+        },
+        {
             name:"toVisit",
             label: "to visit",
             admin: {
