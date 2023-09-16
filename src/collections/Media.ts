@@ -11,7 +11,7 @@ const Media:CollectionConfig = {
         disableLocalStorage: true,
         imageSizes: [
             {
-                name: 'mobile-thumbnail',
+                name: 'mobileThumbnail',
                 width: 360,
                 height: undefined,
                 position: 'centre'
