@@ -4,23 +4,23 @@ const pricing: Field = {
     name: "pricing",
     type: "select",
     admin: {
-        description: "indicative price per head"
+        description: "indicative price range per head - translates to number of € symbols on frontend (one : €, four: €€€€)"
     },
     options: [
         {
-            value: "€",
+            value: "one",
             label: "10-20EUR"
         },
         {
-            value: "€€",
+            value: "two",
             label: "20-30EUR"
         },
         {
-            value: "€€€",
+            value: "three",
             label: "30-50EUR"
         },
         {
-            value: "€€€€",
+            value: "for",
             label: "50+"
         }
     ]
