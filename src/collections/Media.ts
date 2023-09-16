@@ -5,6 +5,9 @@ import notes from "../fields/notes";
 
 const Media:CollectionConfig = {
     slug: "media",
+    admin: {
+        useAsTitle: "title"
+    },
     upload: {
         staticURL: '/media',
         staticDir: 'media',
