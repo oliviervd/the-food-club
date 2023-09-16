@@ -20,7 +20,7 @@ const pricing: Field = {
             label: "30-50EUR"
         },
         {
-            value: "for",
+            value: "four",
             label: "50+"
         }
     ]
