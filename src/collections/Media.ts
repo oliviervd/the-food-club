@@ -1,7 +1,4 @@
 import {CollectionConfig} from "payload/types";
-import path from "path";
-import {isEditor} from "../access/isEditor";
-import {isAdmin} from "../access/isAdmin";
 import contentStatus from "../fields/contentStatus";
 import notes from "../fields/notes";
 
@@ -11,7 +8,26 @@ const Media:CollectionConfig = {
     upload: {
         staticURL: '/media',
         staticDir: 'media',
-        disableLocalStorage: true
+        disableLocalStorage: true,
+        imageSizes: [
+            {
+                name: 'mobile-thumbnail',
+                width: 360,
+                height: undefined,
+                position: 'centre'
+            },
+            {
+                name: 'tablet',
+                width: 1024,
+                height: undefined,
+                position: 'centre'
+            },
+            {
+                name: 'original',
+                width: undefined,
+                height: undefined,
+            }
+        ]
     },
     access: {
         read: ()=> true,
