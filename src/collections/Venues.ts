@@ -49,9 +49,19 @@ const Venues:CollectionConfig = {
             ]
         },
         {
-            name: "website",
-            label: "website",
-            type: "text"
+            type: "row",
+            fields: [
+                {
+                    name: "website",
+                    label: "website",
+                    type: "text"
+                },
+                {
+                    name: "phone",
+                    label: "phone",
+                    type: "text"
+                }
+            ]
         },
         catchPhrase,
         review,
