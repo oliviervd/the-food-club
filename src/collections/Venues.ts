@@ -113,6 +113,15 @@ const Venues:CollectionConfig = {
                 position: "sidebar",
             }
         },
+        {
+            name: "reservations",
+            label: "booking URL",
+            type: "text",
+            admin: {
+                position: "sidebar",
+                description: "url to booking service (Resengo or other)"
+            }
+        },
         notes
     ]
 }
