@@ -5,41 +5,52 @@ const address: Field = {
     type: "group",
     fields: [
         {
-            name: "street",
-            label: "street",
-            type: "text",
-            //required: true
+            type: "row",
+            fields: [
+                {
+                    name: "street",
+                    label: "street",
+                    type: "text",
+                    //required: true
+                },
+                {
+                    name: "houseNumber",
+                    label: "house number",
+                    type: "text",
+                    //required: true
+                },
+                {
+                    name: "city",
+                    label: "city",
+                    type: "text",
+                    //required: true,
+                    //defaultValue: ["Gent"]
+                },
+                {
+                    name: "postalCode",
+                    label: "postal code",
+                    type: "text",
+                    //required: true,
+                    //defaultValue: ["9000"]
+                }
+            ]
         },
         {
-            name: "houseNumber",
-            label: "house number",
-            type: "text",
-            //required: true
-        },
-        {
-            name: "city",
-            label: "city",
-            type: "text",
-            //required: true,
-            //defaultValue: ["Gent"]
-        },
-        {
-            name: "postalCode",
-            label: "postal code",
-            type: "text",
-            //required: true,
-            //defaultValue: ["9000"]
-        },
-        {
-            name: "longitude",
-            label: "longitude",
-            type: "number"
-        },
-        {
-            name: "latitude",
-            label: "latitude",
-            type: "number"
+            type: "row",
+            fields: [
+                {
+                    name: "longitude",
+                    label: "longitude",
+                    type: "number"
+                },
+                {
+                    name: "latitude",
+                    label: "latitude",
+                    type: "number"
+                }
+            ]
         }
+
     ]
 }
 
