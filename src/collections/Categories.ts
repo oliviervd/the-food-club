@@ -53,7 +53,16 @@ const Categories:CollectionConfig = {
             relationTo: "media"
         },
         contentStatus,
-        notes
+        notes,
+        {
+            name: "active",
+            label: "active",
+            type: "checkbox",
+            admin: {
+                position: "sidebar",
+                description: "tick if this category needs to be displayed. - if unticked, the category keeps existing but isn't displayed on the website."
+            }
+        }
     ]
 }
 
