@@ -63,6 +63,17 @@ const Venues:CollectionConfig = {
                 }
             ]
         },
+        {
+            name: "interiordesign",
+            type: "relationship",
+            relationTo: "designer",
+            hasMany: true,
+            defaultValue: "unkown",
+            admin: {
+                description: "interior design by: "
+            }
+
+        },
         catchPhrase,
         review,
         {
