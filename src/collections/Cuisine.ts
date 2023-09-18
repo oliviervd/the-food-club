@@ -15,6 +15,25 @@ const Cuisine: CollectionConfig = {
             type: "text",
             required:true
         },
+        {
+            name: "type",
+            type: "select",
+            required: true,
+            options: [
+                {
+                    label: "drinks",
+                    value: "drinks"
+                },
+                {
+                    label: "cuisine",
+                    value: "cuisine"
+                },
+                {
+                    label: "dish",
+                    value: "dish"
+                }
+            ]
+        },
         notes
     ]
 }

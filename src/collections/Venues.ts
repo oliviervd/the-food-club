@@ -38,6 +38,12 @@ const Venues:CollectionConfig = {
             type: "row",
             fields: [
                 cuisine,
+                {
+                  name: "drinks",
+                  label: "drinks",
+                  type: "relationship",
+                  relationTo: "cuisine"
+                },
                 category
             ]
         },
