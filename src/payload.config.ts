@@ -8,6 +8,7 @@ import Categories from "./collections/Categories";
 import Venues from "./collections/Venues";
 import Cuisine from "./collections/Cuisine";
 import Media from "./collections/Media";
+import Designer from "./collections/Designer";
 
 export default buildConfig({
     // S3 adapter
@@ -54,6 +55,7 @@ export default buildConfig({
         Venues,
         Categories,
         Cuisine,
+        Designer,
         Media
     ],
     typescript: {
