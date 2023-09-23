@@ -16,6 +16,7 @@ const Cuisine: CollectionConfig = {
             required:true
         },
         {
+            // categorise tag
             name: "type",
             type: "select",
             required: true,
