@@ -1,60 +1,67 @@
-import {CollectionConfig} from "payload/types";
+import { CollectionConfig } from "payload/types";
 import contentStatus from "../fields/contentStatus";
 import notes from "../fields/notes";
 
+const Media: CollectionConfig = {
+  slug: "media",
+  admin: {
+    useAsTitle: "title",
+  },
+  upload: {
+    staticURL: "/media",
+    staticDir: "media",
+    disableLocalStorage: true,
+    imageSizes: [
+      {
+        name: "mobileThumbnail",
+        width: 360,
+        height: undefined,
+        position: "centre",
+      },
+      {
+        name: "mobileFriendly",
+        width: 550,
+        height: undefined,
+        position: "centre",
+      },
 
-const Media:CollectionConfig = {
-    slug: "media",
-    admin: {
-        useAsTitle: "title"
+      {
+        name: "tablet",
+        width: 1024,
+        height: undefined,
+        position: "centre",
+      },
+      {
+        name: "original",
+        width: undefined,
+        height: undefined,
+      },
+    ],
+  },
+  access: {
+    read: () => true,
+  },
+  fields: [
+    {
+      name: "title",
+      type: "text",
+      required: true,
     },
-    upload: {
-        staticURL: '/media',
-        staticDir: 'media',
-        disableLocalStorage: true,
-        imageSizes: [
-            {
-                name: 'mobileThumbnail',
-                width: 360,
-                height: undefined,
-                position: 'centre'
-            },
-            {
-                name: 'tablet',
-                width: 1024,
-                height: undefined,
-                position: 'centre'
-            },
-            {
-                name: 'original',
-                width: undefined,
-                height: undefined,
-            }
-        ]
+    {
+      name: "alt",
+      type: "text",
     },
-    access: {
-        read: ()=> true,
+    {
+      name: "dish",
+      type: "text",
+      admin: {
+        description:
+          "if a picture of  a dish on the menu, describe the dish in one or two sentences. Keep it short! ",
+      },
     },
-    fields:[
-        {
-            name: "title",
-            type: "text",
-            required: true
-        },
-        {
-            name: "alt",
-            type: "text"
-        },
-        {
-            name: "dish",
-            type: "text",
-            admin: {
-                description: "if a picture of  a dish on the menu, describe the dish in one or two sentences. Keep it short! "
-            }
-        },
-        contentStatus,
-        notes
-    ]
-}
+    contentStatus,
+    notes,
+  ],
+};
 
-export default Media
+export default Media;
