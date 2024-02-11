@@ -6,7 +6,7 @@ const openingHours: Field = {
     hasMany: true,
     required: true,
     defaultValue: "UNDEFINED",
-    localized: true,
+    localized: false,
     options: [
         {
             value: "Mo",
