@@ -73,7 +73,7 @@ export default buildConfig({
         }
       }
     ],
-    defaultLocale: 'nl',
+    defaultLocale: 'en',
     fallback: true
   },
   db: mongooseAdapter({
