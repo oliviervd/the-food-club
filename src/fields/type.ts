@@ -5,11 +5,14 @@ const occasion: Field = {
     type: "select",
     hasMany: true,
     required: true,
-    //todo: make these for different languages
     options: [
         {
             value: "breakfast",
-            label: "breakfast"
+            label: {
+                en: "breakfast",
+                fr: "petit déjeuner",
+                nl: "ontbijt"
+            }
         },
         {
             value: "brunch",
@@ -25,7 +28,11 @@ const occasion: Field = {
         },
         {
             value: "market",
-            label: "market"
+            label: {
+                en: "market",
+                fr: "marché",
+                nl: "markt"
+            }
         },
         {
             value: "bar",
