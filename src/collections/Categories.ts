@@ -16,9 +16,23 @@ const Categories: CollectionConfig = {
   fields: [
     {
       name: "categoryTitle",
-      label: "category title",
+      label: {
+        nl: "titel categorie",
+        fr: "titre de catégorie",
+        en: "category title"
+      },
       type: "text",
       required: false,
+    },
+    {
+      name: "categorySubTitles",
+      label: {
+        nl: "ondertitel categorie",
+        fr: "catégorie sous-titre",
+        en: "category subtitle"
+      },
+      localized:true,
+      type: "text"
     },
     {
       name: "categorySubTitle",
@@ -37,7 +51,7 @@ const Categories: CollectionConfig = {
         description: "substring that will be highligted in the UI.",
       },
     },
-    {
+    /*{
       type: "row",
       fields: [
         {
@@ -62,7 +76,7 @@ const Categories: CollectionConfig = {
           type: "richText",
         },
       ],
-    },
+    },*/
     {
       name: "image",
       label: "image",
@@ -80,8 +94,11 @@ const Categories: CollectionConfig = {
       type: "checkbox",
       admin: {
         position: "sidebar",
-        description:
-          "tick if this category needs to be displayed. - if unticked, the category keeps existing but isn't displayed on the website.",
+        description:{
+          en: "tick if this category needs to be displayed. - if unticked, the category keeps existing but isn't displayed on the website.",
+          fr: "cocher si cette catégorie doit être affichée. - si la case n'est pas cochée, la catégorie continue d'exister mais n'est pas affichée sur le site web.",
+          nl: "categorie gebruiken op website?"
+        }
       },
     },
   ],
