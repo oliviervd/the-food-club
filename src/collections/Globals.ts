@@ -12,16 +12,7 @@ const Globals = {
             label: "about",
             type: "group",
             fields: [
-                {
-                    name: "about",
-                    label: {
-                        en: "about",
-                        fr: "a propos de",
-                        nl: "over"
-                    },
-                    type: "richText",
-                    localized: true
-                }
+
             ]
         }
     ]
