@@ -85,7 +85,11 @@ const openingHours: Field = {
                 },
                 {
                     name: "openFrom",
-                    label: {},
+                    label: {
+                        en: "open from (hour)",
+                        fr: "ouvert de (heure)",
+                        nl: "open van (uur)"
+                    },
                     type: "date",
                     admin: {
                         date: {
@@ -95,7 +99,11 @@ const openingHours: Field = {
                 },
                 {
                     name: "openTill",
-                    label: {},
+                    label: {
+                        en: "open till (hour)",
+                        fr: "ouvert jusqu'à (heure)",
+                        nl: "open tot (uur)"
+                    },
                     type: "date",
                     admin: {
                         date: {
