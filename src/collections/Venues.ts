@@ -18,6 +18,18 @@ import category from "../fields/category";
 
 const Venues:CollectionConfig = {
     slug: "venue",
+    labels: {
+        singular: {
+            en: "venue",
+            fr: "lieu",
+            nl: "locatie"
+        },
+        plural: {
+            en: "venues",
+            fr: "lieux",
+            nl: "locaties"
+        }
+    },
     admin: {
         useAsTitle: "venueName"
     },
@@ -30,19 +42,41 @@ const Venues:CollectionConfig = {
     fields: [
         {
             name: "venueName",
-            label: "venue name",
+            label: {
+                en: "venue name",
+                nl: "naam locatie",
+                fr: "nom de lieu"
+            },
             type: "text",
-            required: true
+            required: true,
+            admin: {
+                placeholder: {
+                    en: "enter venue name",
+                    nl: "voeg naam van de locatie toe",
+                    fr: "Entrer le nom du lieu"
+                }
+            }
         },
         {
             type: "row",
             fields: [
                 cuisine,
                 {
-                  name: "drinks",
-                  label: "drinks",
-                  type: "relationship",
-                  relationTo: "cuisine"
+                    name: "drinks",
+                    label: {
+                        en: "drinks",
+                        fr: "boissons",
+                        nl: "dranken"
+                    },
+                    type: "relationship",
+                    relationTo: "cuisine",
+                    admin:{
+                        description: {
+                            en: "drinks served at this place",
+                            nl: "dranken die de locatie aanbiedt",
+                            fr: "boissons servies dans ce lieu"
+                        }
+                    }
                 },
                 category
             ]
@@ -64,17 +98,22 @@ const Venues:CollectionConfig = {
                 },
                 {
                     name: "phone",
-                    label: "phone",
+                    label: {
+                        en: "phone number",
+                        fr: "numéro de téléphone",
+                        nl: "telefoonnummer"
+                    },
+                    admin: {
+                      placeholder: {
+                          en: "add phone number here",
+                          fr: "ajouter un numéro de téléphone",
+                          nl: "voeg hier het telefoonnummer toe"
+                      }
+                    },
                     type: "text"
                 }
             ]
         },
-       /* {
-            name: "interiordesign",
-            type: "relationship",
-            relationTo: "designer",
-            hasMany: true
-        },*/
         catchPhrase,
         review,
         {
@@ -83,13 +122,17 @@ const Venues:CollectionConfig = {
             localized: true,
             label: "Food Club tip",
             admin: {
-                description: "add a short text on what the Food Club orders when coming here, or any tips."
+                description: {
+                    en: "add a short text on what the Food Club orders when coming here, or any tips.",
+                    fr: "ajouter un court texte sur ce que le Food Club commande lorsqu'il vient ici, ou des conseils.",
+                    nl: "korte tekst met tips van de food club."
+                }
             }
         },
         // leave fields below till migration strategy has been completed!
         {
-          name: "clubOrder",
-          type: 'richText'
+            name: "clubOrder",
+            type: 'richText'
         },
         {
             name: "media",
