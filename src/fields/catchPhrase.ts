@@ -9,6 +9,16 @@ const catchPhrase: Field = {
     type: "group",
     fields: [
         {
+            name: "slug",
+            label: "slug",
+            type: "richText",
+            localized: true,
+            admin: {
+                description: "short description that comes below the title. restrict to 1 or two sentences max!"
+            }
+        },
+        // leave fields below till migration strategy has been completed!
+        {
             name: "slugEN",
             label: "slug (EN)",
             type: "richText"

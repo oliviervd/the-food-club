@@ -41,6 +41,17 @@ const Categories: CollectionConfig = {
       type: "row",
       fields: [
         {
+          name: "categoryBrief",
+          label: {
+            en: "category catchphrase",
+            nl: "korte beschrijving categorie",
+            fr: "Catégorie Phrase d'accroche"
+          },
+          localized:true,
+          type: "richText"
+        },
+          // leave these till after migration!
+        {
           name: "briefEN",
           label: "brief description (English)",
           type: "richText",
