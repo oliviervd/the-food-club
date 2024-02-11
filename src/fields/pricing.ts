@@ -2,9 +2,18 @@ import {Field} from "payload/types";
 
 const pricing: Field = {
     name: "pricing",
+    label: {
+      en: "pricing",
+      fr: "catégorie de prix",
+      nl: "prijscategorie"
+    },
     type: "select",
     admin: {
-        description: "indicative price range per head - translates to number of € symbols on frontend (one : €, four: €€€€)"
+        description: {
+            en: "indicative price range per head - translates to number of € symbols on frontend (one : €, four: €€€€)",
+            fr: "Fourchette de prix indicative par tête - traduit en nombre de symboles € sur le frontend (un : €, quatre : €€€€)",
+            nl: "dicatieve prijsklasse per persoon - vertaalt zich naar aantal €-symbolen op de website (één: €, vier: €€€€)"
+        }
     },
     options: [
         {

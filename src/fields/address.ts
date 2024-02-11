@@ -9,29 +9,39 @@ const address: Field = {
             fields: [
                 {
                     name: "street",
-                    label: "street",
+                    label: {
+                        en: "street",
+                        fr: "rue",
+                        nl: "straat"
+                    },
                     type: "text",
-                    //required: true
                 },
                 {
                     name: "houseNumber",
-                    label: "house number",
+                    label: {
+                        en: "house number",
+                        fr: "numéro de maison",
+                        nl: "huisnummer"
+                    },
                     type: "text",
-                    //required: true
                 },
                 {
                     name: "city",
-                    label: "city",
+                    label: {
+                        en: "city",
+                        fr: "ville",
+                        nl: "gemeente"
+                    },
                     type: "text",
-                    //required: true,
-                    //defaultValue: ["Gent"]
                 },
                 {
                     name: "postalCode",
-                    label: "postal code",
+                    label: {
+                        en: "postal code",
+                        fr: "code postal",
+                        nl: "postcode"
+                    },
                     type: "text",
-                    //required: true,
-                    //defaultValue: ["9000"]
                 }
             ]
         },
@@ -40,12 +50,20 @@ const address: Field = {
             fields: [
                 {
                     name: "longitude",
-                    label: "longitude",
+                    label: {
+                        en: "longitude",
+                        fr: "longitude",
+                        nl: "lengtegraad"
+                    },
                     type: "number"
                 },
                 {
                     name: "latitude",
-                    label: "latitude",
+                    label: {
+                        en: "latitude",
+                        fr: "latitude",
+                        nl: "breedtegraad"
+                    },
                     type: "number"
                 }
             ]

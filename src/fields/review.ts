@@ -2,7 +2,7 @@ import {Field} from "payload/types";
 
 const review: Field = {
     name: "reviews",
-        label: "reviews",
+    label: "reviews",
     admin: {
       description: "this is what the food club had to say. - rule number 2. don't argue with the food club."
     },

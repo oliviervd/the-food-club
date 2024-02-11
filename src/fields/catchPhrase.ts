@@ -10,11 +10,19 @@ const catchPhrase: Field = {
     fields: [
         {
             name: "slug",
-            label: "slug",
+            label: {
+                en: "short introduction",
+                fr: "description sommaire",
+                nl: "korte introductie",
+            },
             type: "richText",
             localized: true,
             admin: {
-                description: "short description that comes below the title. restrict to 1 or two sentences max!"
+                description: {
+                    en: "short description that comes below the title. restrict to 1 or two sentences max!",
+                    fr: "courte description qui figure sous le titre. limiter à 1 ou 2 phrases maximum !",
+                    nl: "korte beschrijving die onder naam van restaurant/bar komt. Hou het kort en bondig!"
+                }
             }
         },
         // leave fields below till migration strategy has been completed!

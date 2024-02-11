@@ -1,12 +1,18 @@
 import {Field} from "payload/types";
-import {isEditor} from "../access/isEditor";
-import {isAdmin} from "../access/isAdmin";
 
 const category:Field = {
     name: "category",
-    label: "categorie(s)",
+    label: {
+        en: "categorie(s)",
+        fr: "categorie(s)",
+        nl: "categorie(en)"
+    },
     admin: {
-        description: "pick the categories to which this venue belongs",
+        description: {
+            en: "pick the categories to which this venue belongs",
+            fr: "Choisissez les catégories auxquelles ce lieu appartient",
+            nl: "kies de categorieën waartoe deze locatie behoort"
+        },
     },
     access: {
         read: () => true
@@ -14,6 +20,5 @@ const category:Field = {
     type: "relationship",
     hasMany: true,
     relationTo: "categories"
-
 }
 export default category
