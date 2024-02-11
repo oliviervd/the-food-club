@@ -46,6 +46,33 @@ export default buildConfig({
       },
     }),
   ],
+  localization:{
+    locales: [
+      {
+        code: 'nl',
+        label: {
+          en: "Dutch",
+          fr: "Néerlandais"
+        }
+      },
+      {
+        code: 'en',
+        label: {
+          fr: "Anglais",
+          nl: "Engels"
+        }
+      },
+      {
+        code: 'fr',
+        label: {
+          en: "French",
+          nl: "Frans"
+        }
+      }
+    ],
+    defaultLocale: 'nl',
+    fallback: true
+  },
   db: mongooseAdapter({
     url: process.env.MONGODB_URI,
   }),
