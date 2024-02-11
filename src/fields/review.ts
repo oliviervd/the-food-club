@@ -12,19 +12,7 @@ const review: Field = {
             name: "review",
             type: "richText",
             localized: true,
-            //defaultValue: "pending review",
             label: "review"
-        },
-        // leave fields below till migration strategy has been completed!
-        {
-            name: "reviewEN",
-            label: "review (EN)",
-            type: "richText"
-        },
-        {
-            name: "reviewNL",
-            label: "review (NL)",
-            type: "richText"
         },
         {
             name: "author",
