@@ -153,22 +153,38 @@ const Venues:CollectionConfig = {
         memberStatus,
         {
             name: 'vegetarian',
-            label: 'vegetarian friendly?',
+            label: {
+                en: "vegetarian friendly?",
+                fr: "végétarienne?",
+                nl: "vegetarisch aanbod?"
+            },
             type: "checkbox",
             defaultValue: false,
             admin: {
                 position: "sidebar",
-                description: "does this venue offer vegetarian menu?"
+                description: {
+                    en: "does this venue offer vegetarian menu?",
+                    fr: "Ce lieu propose-t-il un menu végétarien?",
+                    nl: "biedt deze locatie vegetarische opties?"
+                }
             },
         },
         {
             name: 'vegan',
-            label: 'vegan friendly?',
+            label: {
+                en: 'vegan friendly?',
+                fr: "vegan friendly?",
+                nl: 'vegan friendly?'
+            },
             type: "checkbox",
             defaultValue: false,
             admin: {
                 position: "sidebar",
-                description: "does this venue offer vegan menu?"
+                description: {
+                    en: "does this venue offer vegan menu?",
+                    fr: "Ce lieu propose-t-il un menu vegan?",
+                    nl: "biedt deze locatie vegan opties?"
+                }
             },
         },
         {
@@ -194,7 +210,11 @@ const Venues:CollectionConfig = {
             type: "text",
             admin: {
                 position: "sidebar",
-                description: "url to booking service (Resengo or other)"
+                description: {
+                    en: "url to booking service (Resengo or other)",
+                    fr: "url vers le service de réservation (Resengo ou autre)",
+                    nl: "url naar booking service (Resengo, ...)"
+                }
             }
         },
         notes
