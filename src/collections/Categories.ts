@@ -42,51 +42,6 @@ const Categories: CollectionConfig = {
         description: "substring that will be highligted in the UI.",
       },
     },
-    /*{
-      type: "row",
-      fields: [
-        {
-          name: "categoryBrief",
-          label: {
-            en: "category catchphrase",
-            nl: "korte beschrijving categorie",
-            fr: "Catégorie Phrase d'accroche"
-          },
-          localized:true,
-          type: "richText"
-        },
-          // leave these till after migration!
-        {
-          name: "briefEN",
-          label: "brief description (English)",
-          type: "richText",
-        },
-        {
-          name: "briefNL",
-          label: "brief description (Dutch)",
-          type: "richText",
-        },
-      ],
-    },
-    {
-      name: "image",
-      label: {
-        en: "image",
-        fr: "image",
-        nl: "afbeelding"
-      },
-      admin: {
-        description:
-            {
-              en: "image/illustration used to depict the category",
-              fr: "image pour illustrer la catégorie",
-              nl: "afbeelding om de categorie te illustreren"
-            }
-      },
-      type: "relationship",
-      relationTo: "media",
-    },
-    */
     contentStatus,
     notes,
     {
