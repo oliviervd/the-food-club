@@ -17,7 +17,7 @@ const cuisine:Field = {
     type: "relationship",
     hasMany: true,
     relationTo: "cuisine",
-    required: true
+    required: false
 }
 
 export default cuisine
