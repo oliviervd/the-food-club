@@ -30,7 +30,8 @@ const Cuisine: CollectionConfig = {
         {
             name: "name",
             type: "text",
-            required:true
+            required:true,
+            localized: true,
         },
         {
             // categorise tag
