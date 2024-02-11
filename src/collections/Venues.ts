@@ -135,7 +135,6 @@ const Venues:CollectionConfig = {
             type: "relationship",
             relationTo: "media"
         },
-        //todo: change openinghours to a group (day, open from, open till)
         openingHours,
         address,
         {

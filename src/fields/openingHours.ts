@@ -7,7 +7,7 @@ const openingHours: Field = {
         fr: "horaires",
         nl: "openingsuren"
     },
-    name: "openOn",
+    name: "hours",
     fields:[
         {
             name: "openDay",
