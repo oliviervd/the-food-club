@@ -7,6 +7,18 @@ import notes from "../fields/notes";
 
 const Categories: CollectionConfig = {
   slug: "categories",
+  labels: {
+    singular: {
+      en: "category",
+      nl: "categorie",
+      fr: "catégorie"
+    },
+    plural: {
+      en: "categories",
+      nl: "categorieen",
+      fr: "catégories"
+    }
+  },
   admin: {
     useAsTitle: "categoryTitle",
   },
@@ -35,65 +47,12 @@ const Categories: CollectionConfig = {
       type: "text"
     },
     {
-      name: "categorySubTitle",
-      label: "category subtitle",
-      type: "text",
-      admin: {
-        description:
-          "catchphrase that goes along with the title, a slur of sorts. (MIGRATE)",
-      },
-    },
-    {
       name: "highlight",
       label: "highlight",
       type: "text",
       admin: {
         description: "substring that will be highligted in the UI.",
       },
-    },
-    /*{
-      type: "row",
-      fields: [
-        {
-          name: "categoryBrief",
-          label: {
-            en: "category catchphrase",
-            nl: "korte beschrijving categorie",
-            fr: "Catégorie Phrase d'accroche"
-          },
-          localized:true,
-          type: "richText"
-        },
-          // leave these till after migration!
-        {
-          name: "briefEN",
-          label: "brief description (English)",
-          type: "richText",
-        },
-        {
-          name: "briefNL",
-          label: "brief description (Dutch)",
-          type: "richText",
-        },
-      ],
-    },*/
-    {
-      name: "image",
-      label: {
-        en: "image",
-        fr: "image",
-        nl: "afbeelding"
-      },
-      admin: {
-        description:
-            {
-              en: "image/illustration used to depict the category",
-              fr: "image pour illustrer la catégorie",
-              nl: "afbeelding om de categorie te illustreren"
-            }
-      },
-      type: "relationship",
-      relationTo: "media",
     },
     contentStatus,
     notes,
