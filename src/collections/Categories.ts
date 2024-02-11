@@ -35,15 +35,6 @@ const Categories: CollectionConfig = {
       type: "text"
     },
     {
-      name: "categorySubTitle",
-      label: "category subtitle",
-      type: "text",
-      admin: {
-        description:
-          "catchphrase that goes along with the title, a slur of sorts. (MIGRATE)",
-      },
-    },
-    {
       name: "highlight",
       label: "highlight",
       type: "text",
@@ -76,7 +67,7 @@ const Categories: CollectionConfig = {
           type: "richText",
         },
       ],
-    },*/
+    },
     {
       name: "image",
       label: {
@@ -95,6 +86,7 @@ const Categories: CollectionConfig = {
       type: "relationship",
       relationTo: "media",
     },
+    */
     contentStatus,
     notes,
     {
