@@ -78,6 +78,16 @@ const Venues:CollectionConfig = {
         catchPhrase,
         review,
         {
+            name: "foodClubOrder",
+            type: "richText",
+            localized: true,
+            label: "Food Club tip",
+            admin: {
+                description: "add a short text on what the Food Club orders when coming here, or any tips."
+            }
+        },
+        // leave fields below till migration strategy has been completed!
+        {
           name: "clubOrder",
           type: 'richText'
         },
