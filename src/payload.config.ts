@@ -12,6 +12,7 @@ import Venues from "./collections/Venues";
 import Cuisine from "./collections/Cuisine";
 import Media from "./collections/Media";
 import Designer from "./collections/Designer";
+import Globals from "./collections/Globals";
 
 export default buildConfig({
   //
@@ -93,7 +94,7 @@ export default buildConfig({
     "https://p01--cms--j4bvc8vdjtjb.code.run/",
     "vitals.vercel-insights.com",
   ],
-  collections: [Users, Venues, Categories, Cuisine, Designer, Media],
+  collections: [Globals, Users, Venues, Categories, Cuisine, Designer, Media],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
