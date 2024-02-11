@@ -7,6 +7,18 @@ import notes from "../fields/notes";
 
 const Categories: CollectionConfig = {
   slug: "categories",
+  labels: {
+    singular: {
+      en: "category",
+      nl: "categorie",
+      fr: "catégorie"
+    },
+    plural: {
+      en: "categories",
+      nl: "categorieen",
+      fr: "catégories"
+    }
+  },
   admin: {
     useAsTitle: "categoryTitle",
   },
