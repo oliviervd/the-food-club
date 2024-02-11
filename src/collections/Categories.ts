@@ -40,7 +40,7 @@ const Categories: CollectionConfig = {
       type: "text",
       admin: {
         description:
-          "catchphrase that goes along with the title, a slur of sorts.",
+          "catchphrase that goes along with the title, a slur of sorts. (MIGRATE)",
       },
     },
     {
@@ -79,9 +79,18 @@ const Categories: CollectionConfig = {
     },*/
     {
       name: "image",
-      label: "image",
+      label: {
+        en: "image",
+        fr: "image",
+        nl: "afbeelding"
+      },
       admin: {
-        description: "image/illustration used to depict the category",
+        description:
+            {
+              en: "image/illustration used to depict the category",
+              fr: "image pour illustrer la catégorie",
+              nl: "afbeelding om de categorie te illustreren"
+            }
       },
       type: "relationship",
       relationTo: "media",
@@ -90,7 +99,11 @@ const Categories: CollectionConfig = {
     notes,
     {
       name: "active",
-      label: "active",
+      label: {
+        en: "active?",
+        nl: "actief?",
+        fr: "active?"
+      },
       type: "checkbox",
       admin: {
         position: "sidebar",
