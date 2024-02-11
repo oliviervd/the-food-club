@@ -1,6 +1,11 @@
 import { buildConfig } from "payload/config";
 import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
 import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
+
+import { mongooseAdapter } from "@payloadcms/db-mongodb";
+import { slateEditor } from "@payloadcms/richtext-slate";
+import { webpackBundler } from "@payloadcms/bundler-webpack";
+
 import path from "path";
 import Users from "./collections/Users";
 import Categories from "./collections/Categories";
@@ -11,6 +16,12 @@ import Designer from "./collections/Designer";
 
 export default buildConfig({
   //
+  serverURL: process.env.PAYLOAD_URL,
+  admin: {
+    user: Users.slug,
+    bundler: webpackBundler(),
+  },
+  editor: slateEditor({}),
   plugins: [
     cloudStorage({
       collections: {
@@ -36,7 +47,9 @@ export default buildConfig({
       },
     }),
   ],
-  serverURL: process.env.PAYLOAD_URL,
+  db: mongooseAdapter({
+    url: process.env.MONGODB_URI,
+  }),
   //CORS
   cors: [
     "https://the-food-club-front.vercel.app",
@@ -51,9 +64,6 @@ export default buildConfig({
     "https://p01--cms--j4bvc8vdjtjb.code.run/",
     "vitals.vercel-insights.com",
   ],
-  admin: {
-    user: Users.slug,
-  },
   collections: [Users, Venues, Categories, Cuisine, Designer, Media],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
