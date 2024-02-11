@@ -7,6 +7,7 @@ const catchPhrase: Field = {
         description: "this is what the food club had to say (in short). - rule number 2. don't argue with the food club."
     },
     type: "group",
+    // todo: remove group after migration
     fields: [
         {
             name: "slug",
@@ -24,17 +25,6 @@ const catchPhrase: Field = {
                     nl: "korte beschrijving die onder naam van restaurant/bar komt. Hou het kort en bondig!"
                 }
             }
-        },
-        // leave fields below till migration strategy has been completed!
-        {
-            name: "slugEN",
-            label: "slug (EN)",
-            type: "richText"
-        },
-        {
-            name: "slugNL",
-            label: "slug (NL)",
-            type: "richText"
         },
         {
             name: "author",

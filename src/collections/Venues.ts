@@ -129,15 +129,94 @@ const Venues:CollectionConfig = {
                 }
             }
         },
-        // leave fields below till migration strategy has been completed!
-        {
-            name: "clubOrder",
-            type: 'richText'
-        },
+        // todo: add posibility to add multiple images
         {
             name: "media",
             type: "relationship",
             relationTo: "media"
+        },
+        //todo: change openinghours to a group (day, open from, open till)
+        {
+            type: "array",
+            label: {
+                en: "hours",
+                fr: "horaires",
+                nl: "openingsuren"
+            },
+            name: "openOn",
+            fields:[
+                {
+                    name: "openDay",
+                    label: {
+                        en: "day",
+                        fr: "jour",
+                        nl: "dag"
+                    },
+                    type: "select",
+                    options: [
+                        {
+                            value: "Mo",
+                            label: {
+                                en: "Monday",
+                                fr: "Lundi",
+                                nl: "maandag"
+                            }
+                        },
+                        {
+                            value: "Tu",
+                            label: {
+                                en: "Tuesday",
+                                fr: "Mardi",
+                                nl: "dinsdag"
+                            }
+                        },
+                        {
+                            value: "We",
+                            label: {
+                                en: "Wednesday",
+                                fr: "Mercredi",
+                                nl: "woensdag"
+                            }
+                        },
+                        {
+                            value: "Thu",
+                            label: {
+                                en: "Thursday",
+                                fr: "Jeudi",
+                                nl: "donderdag"
+                            }
+                        },
+                        {
+                            value: "Fr",
+                            label: {
+                                en: "Friday",
+                                fr: "Vendredi",
+                                nl: "vrijdag"
+                            }
+                        },
+                        {
+                            value: "Sat",
+                            label: {
+                                en: "Saturday",
+                                fr: "Samedi",
+                                nl: "zaterdag"
+                            }
+                        },
+                        {
+                            value: "Sun",
+                            label: {
+                                en: "Sunday",
+                                fr: "Dimanche",
+                                nl: "zondag"
+                            }
+                        },
+                        {
+                            value: "UNDEFINED",
+                            label: "UNDEFINED"
+                        }
+                    ]
+                }
+            ]
         },
         openingHours,
         address,
