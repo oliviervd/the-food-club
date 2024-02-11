@@ -6,34 +6,63 @@ const openingHours: Field = {
     hasMany: true,
     required: true,
     defaultValue: "UNDEFINED",
+    localized: true,
     options: [
         {
             value: "Mo",
-            label: "Monday"
+            label: {
+                en: "Monday",
+                fr: "Lundi",
+                nl: "maandag"
+            }
         },
         {
             value: "Tu",
-            label: "Tuesday"
+            label: {
+                en: "Tuesday",
+                fr: "Mardi",
+                nl: "dinsdag"
+            }
         },
         {
             value: "We",
-            label: "Wednesday"
+            label: {
+                en: "Wednesday",
+                fr: "Mercredi",
+                nl: "woensdag"
+            }
         },
         {
             value: "Thu",
-            label: "Thursday"
+            label: {
+                en: "Thursday",
+                fr: "Jeudi",
+                nl: "donderdag"
+            }
         },
         {
             value: "Fr",
-            label: "Friday"
+            label: {
+                en: "Friday",
+                fr: "Vendredi",
+                nl: "vrijdag"
+            }
         },
         {
             value: "Sat",
-            label: "Saturday"
+            label: {
+                en: "Saturday",
+                fr: "Samedi",
+                nl: "zaterdag"
+            }
         },
         {
             value: "Sun",
-            label: "Sunday"
+            label: {
+                en: "Sunday",
+                fr: "Dimanche",
+                nl: "zondag"
+            }
         },
         {
             value: "UNDEFINED",
