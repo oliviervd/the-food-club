@@ -9,6 +9,14 @@ const review: Field = {
     type: "group",
     fields: [
         {
+            name: "review",
+            type: "richText",
+            localized: true,
+            defaultValue: "pending review",
+            label: "review"
+        },
+        // leave fields below till migration strategy has been completed!
+        {
             name: "reviewEN",
             label: "review (EN)",
             type: "richText"
