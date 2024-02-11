@@ -51,6 +51,7 @@ export default buildConfig({
       {
         code: 'nl',
         label: {
+          nl: "Nederlands",
           en: "Dutch",
           fr: "Néerlandais"
         }
@@ -58,6 +59,7 @@ export default buildConfig({
       {
         code: 'en',
         label: {
+          en: "English",
           fr: "Anglais",
           nl: "Engels"
         }
@@ -65,6 +67,7 @@ export default buildConfig({
       {
         code: 'fr',
         label: {
+          fr: "Francais",
           en: "French",
           nl: "Frans"
         }
