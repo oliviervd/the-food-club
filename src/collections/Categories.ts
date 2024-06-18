@@ -1,7 +1,4 @@
 import { CollectionConfig } from "payload/types";
-import { isEditor } from "../access/isEditor";
-import { isAdmin } from "../access/isAdmin";
-import { hasAccessOrPublished } from "../access/hasAccessOrPublished";
 import contentStatus from "../fields/contentStatus";
 import notes from "../fields/notes";
 
@@ -45,6 +42,12 @@ const Categories: CollectionConfig = {
       },
       localized:true,
       type: "text"
+    },
+    {
+      name: "hero",
+      label: "hero image",
+      type:"relationship",
+      relationTo: "media",
     },
     {
       name: "highlight",
