@@ -59,7 +59,6 @@ const Media: CollectionConfig = {
           "if a picture of  a dish on the menu, describe the dish in one or two sentences. Keep it short! ",
       },
     },
-    contentStatus,
     notes,
   ],
 };
