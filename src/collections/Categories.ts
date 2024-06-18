@@ -56,14 +56,6 @@ const Categories: CollectionConfig = {
               type:"relationship",
               relationTo: "media",
             },
-            {
-              name: "highlight",
-              label: "highlight",
-              type: "text",
-              admin: {
-                description: "substring that will be highligted in the UI.",
-              },
-            },
           ]
         },
         {
