@@ -14,7 +14,7 @@ const Globals = {
                 {
                     label: "title",
                     name: "title",
-                    type: "string"
+                    type: "text"
                 },
                 {
                     label: "text",
