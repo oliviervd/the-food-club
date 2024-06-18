@@ -23,41 +23,30 @@ const Categories: CollectionConfig = {
     read: () => true,
   },
   fields: [
+      {
+    name: "categoryTitle",
+    label: {
+      nl: "titel categorie",
+      fr: "titre de catégorie",
+      en: "category title"
+    },
+    type: "text",
+    required: false,
+  },
+    {
+      name: "categorySubTitles",
+      label: {
+        nl: "ondertitel categorie",
+        fr: "catégorie sous-titre",
+        en: "category subtitle"
+      },
+      localized:true,
+      type: "text"
+    },
     {
       type: "tabs",
+
       tabs: [
-        {
-          name: "description",
-          label: "description",
-          fields: [
-            {
-              name: "categoryTitle",
-              label: {
-                nl: "titel categorie",
-                fr: "titre de catégorie",
-                en: "category title"
-              },
-              type: "text",
-              required: false,
-            },
-            {
-              name: "categorySubTitles",
-              label: {
-                nl: "ondertitel categorie",
-                fr: "catégorie sous-titre",
-                en: "category subtitle"
-              },
-              localized:true,
-              type: "text"
-            },
-            {
-              name: "hero",
-              label: "hero image",
-              type:"relationship",
-              relationTo: "media",
-            },
-          ]
-        },
         {
           name: "venues",
           label: "venues",
@@ -79,11 +68,21 @@ const Categories: CollectionConfig = {
               ]
             }
           ]
+        },
+        {
+          name: "media",
+          label: "media",
+          fields: [
+            {
+              name: "hero",
+              label: "hero image",
+              type:"relationship",
+              relationTo: "media",
+            },
+          ]
         }
       ]
     },
-
-    contentStatus,
     notes,
     {
       name: "active",
