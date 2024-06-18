@@ -14,7 +14,6 @@ import {isEditor} from "../access/isEditor";
 import catchPhrase from "../fields/catchPhrase";
 import occasion from "../fields/type";
 import openingHours from "../fields/openingHours";
-import category from "../fields/category";
 
 const Venues:CollectionConfig = {
     slug: "venue",
@@ -77,9 +76,8 @@ const Venues:CollectionConfig = {
                             fr: "boissons servies dans ce lieu"
                         }
                     }
-                },
-                category
-            ]
+                }
+                ]
         },
         {
             type:"row",
@@ -129,7 +127,7 @@ const Venues:CollectionConfig = {
                 }
             }
         },
-        // todo: add posibility to add multiple images
+        // todo: add posibility to add multiple images - put in tab
         {
             name: "media",
             type: "relationship",
