@@ -24,39 +24,73 @@ const Categories: CollectionConfig = {
   },
   fields: [
     {
-      name: "categoryTitle",
-      label: {
-        nl: "titel categorie",
-        fr: "titre de catégorie",
-        en: "category title"
-      },
-      type: "text",
-      required: false,
+      type: "tabs",
+      tabs: [
+        {
+          name: "description",
+          label: "description",
+          fields: [
+            {
+              name: "categoryTitle",
+              label: {
+                nl: "titel categorie",
+                fr: "titre de catégorie",
+                en: "category title"
+              },
+              type: "text",
+              required: false,
+            },
+            {
+              name: "categorySubTitles",
+              label: {
+                nl: "ondertitel categorie",
+                fr: "catégorie sous-titre",
+                en: "category subtitle"
+              },
+              localized:true,
+              type: "text"
+            },
+            {
+              name: "hero",
+              label: "hero image",
+              type:"relationship",
+              relationTo: "media",
+            },
+            {
+              name: "highlight",
+              label: "highlight",
+              type: "text",
+              admin: {
+                description: "substring that will be highligted in the UI.",
+              },
+            },
+          ]
+        },
+        {
+          name: "venues",
+          label: "venues",
+          fields: [
+            {
+              name: "venues",
+              label: "venues",
+              admin: {
+                description: "venues in category (order will be maintained)"
+              },
+              type: "array",
+              fields: [
+                  {
+                    name: "venue",
+                    label: "venue",
+                    type: "relationship",
+                    relationTo: "venue"
+                  }
+              ]
+            }
+          ]
+        }
+      ]
     },
-    {
-      name: "categorySubTitles",
-      label: {
-        nl: "ondertitel categorie",
-        fr: "catégorie sous-titre",
-        en: "category subtitle"
-      },
-      localized:true,
-      type: "text"
-    },
-    {
-      name: "hero",
-      label: "hero image",
-      type:"relationship",
-      relationTo: "media",
-    },
-    {
-      name: "highlight",
-      label: "highlight",
-      type: "text",
-      admin: {
-        description: "substring that will be highligted in the UI.",
-      },
-    },
+
     contentStatus,
     notes,
     {
