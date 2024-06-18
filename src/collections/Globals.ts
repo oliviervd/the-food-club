@@ -8,12 +8,21 @@ const Globals = {
     fields:[
         {
             //menu items
-            name: "about",
-            label: "about",
-            type: "group",
+            name: "texts",
+            type: "array",
             fields: [
-
+                {
+                    label: "title",
+                    name: "title",
+                    type: "string"
+                },
+                {
+                    label: "text",
+                    name: "text",
+                    type: "richText"
+                }
             ]
+
         }
     ]
 }
