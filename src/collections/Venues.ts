@@ -77,7 +77,7 @@ const Venues:CollectionConfig = {
                         }
                     }
                 }
-                ]
+            ]
         },
         {
             type:"row",
@@ -102,11 +102,11 @@ const Venues:CollectionConfig = {
                         nl: "telefoonnummer"
                     },
                     admin: {
-                      placeholder: {
-                          en: "add phone number here",
-                          fr: "ajouter un numéro de téléphone",
-                          nl: "voeg hier het telefoonnummer toe"
-                      }
+                        placeholder: {
+                            en: "add phone number here",
+                            fr: "ajouter un numéro de téléphone",
+                            nl: "voeg hier het telefoonnummer toe"
+                        }
                     },
                     type: "text"
                 }
@@ -127,14 +127,37 @@ const Venues:CollectionConfig = {
                 }
             }
         },
-        // todo: add posibility to add multiple images - put in tab
-        {
-            name: "media",
-            type: "relationship",
-            relationTo: "media"
-        },
         openingHours,
         address,
+        {
+            type: "tabs",
+            tabs: [
+                {name: "media",
+                    label: "Media",
+                    fields:[
+                        {
+                            name: "hero",
+                            label: "hero image",
+                            type: "relationship",
+                            relationTo: "media"
+                        },
+                        {
+                            type: "array",
+                            name : "gallery",
+                            label: "gallery",
+                            fields: [
+                                {
+                                    label: "image",
+                                    name: "image",
+                                    type: "relationship",
+                                    relationTo: "media"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
             name: "warning",
             type: "text",
