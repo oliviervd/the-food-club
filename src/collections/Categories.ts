@@ -101,6 +101,14 @@ const Categories: CollectionConfig = {
         }
       },
     },
+    {
+      name: "url",
+      label: "URL",
+      type: "text",
+      admin: {
+        position: "sidebar"
+      }
+    }
   ],
 };
 
