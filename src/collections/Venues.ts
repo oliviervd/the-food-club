@@ -129,6 +129,8 @@ const Venues:CollectionConfig = {
         },
         openingHours,
         address,
+
+        // media
         {
             type: "tabs",
             tabs: [
