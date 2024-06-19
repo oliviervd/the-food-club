@@ -165,6 +165,9 @@ const Venues:CollectionConfig = {
             name: "club",
             label: "club",
             type: "select",
+            admin: {
+                position: "sidebar"
+            },
             options: [
                 {
                     label:"brussels",
