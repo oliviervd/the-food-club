@@ -183,6 +183,14 @@ const Venues:CollectionConfig = {
                 }
             ]
         },
+        {
+            name: "url",
+            label: "URL",
+            type: "text",
+            admin: {
+                position: "sidebar"
+            }
+        },
         contentStatus,
         memberStatus,
         {
