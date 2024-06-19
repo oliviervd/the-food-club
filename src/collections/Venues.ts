@@ -160,13 +160,25 @@ const Venues:CollectionConfig = {
                 }
             ]
         },
+
         {
-            name: "warning",
-            type: "text",
-            label: "warning",
-            admin: {
-                description: "if visiting, make sure to take into account the following:.."
-            }
+            name: "club",
+            label: "club",
+            type: "select",
+            options: [
+                {
+                    label:"brussels",
+                    value: "brussels"
+                },
+                {
+                    label: "gent",
+                    value: "gent"
+                },
+                {
+                    label: "antwerp",
+                    value: "antwerp"
+                }
+            ]
         },
         contentStatus,
         memberStatus,
