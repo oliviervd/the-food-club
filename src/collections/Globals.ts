@@ -1,6 +1,6 @@
 import {CollectionConfig} from "payload/types";
 
-const Globals = {
+const Globals: CollectionConfig = {
     slug: "globals",
     access: {
         read: () => true
