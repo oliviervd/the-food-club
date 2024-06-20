@@ -72,6 +72,15 @@ const Cuisine: CollectionConfig = {
                 }
             ]
         },
+        {
+            name: "description",
+            label: "description",
+            type: "richText",
+            localized: true,
+            admin: {
+                description: "write a short wiki-like text that explains what this category is about. This doesn't need to be formal, encyclopedic."
+            }
+        },
         notes
     ]
 }
