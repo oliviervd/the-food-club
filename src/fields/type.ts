@@ -37,6 +37,18 @@ const occasion: Field = {
         {
             value: "bar",
             label: "bar"
+        },
+        {
+            value: "bakery",
+            label: {
+                en: "bakery",
+                fr: "boulangier",
+                nl: "bakkerij"
+            }
+        },
+        {
+            value: "snack",
+            label: "snack"
         }
     ]
 }
