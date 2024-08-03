@@ -44,6 +44,19 @@ const Categories: CollectionConfig = {
       type: "text"
     },
     {
+      name: "categoryDescription",
+      admin: {
+        description: "brief description of the category."
+      },
+      label: {
+        nl: "beschrijving categorie",
+        fr: "catégorie description",
+        en: "category desc"
+      },
+      type: "richText",
+      localized: true
+    },
+    {
       type: "tabs",
 
       tabs: [
