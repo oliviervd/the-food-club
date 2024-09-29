@@ -128,6 +128,15 @@ const Venues:CollectionConfig = {
             }
         },
         openingHours,
+        {
+            label: "other opening hours (atypical)",
+            name: "otherOpeningHours",
+            type: "richText",
+            localized: true,
+            admin: {
+                description: {}
+            }
+        },
         address,
 
         // media
