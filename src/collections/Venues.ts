@@ -33,10 +33,10 @@ const Venues:CollectionConfig = {
         useAsTitle: "venueName"
     },
     access: {
-        read: hasAccessOrPublished,
+        read: ()=>true,
         create: ()=>true,
-        update: isEditor,
-        delete: isAdmin
+        update: ()=>true,
+        delete: ()=>true
     },
     fields: [
         {
