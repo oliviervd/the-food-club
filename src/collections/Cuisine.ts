@@ -81,7 +81,20 @@ const Cuisine: CollectionConfig = {
                 description: "write a short wiki-like text that explains what this category is about. This doesn't need to be formal, encyclopedic."
             }
         },
-        notes
+        notes,
+        {
+            name: "active",
+            admin:{
+                position: "sidebar",
+                description: "tick if this category needs to be displayed. - if unticked, the category keeps existing but isn\'t displayed on the website (homepage)."
+            },
+            label: {
+                en: "active?",
+                fr: "actif?",
+                nl: "actief?"
+            },
+            type: "checkbox",
+        }
     ]
 }
 
