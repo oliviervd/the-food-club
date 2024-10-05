@@ -1,4 +1,5 @@
 import {CollectionConfig} from "payload/types";
+import {FieldHook} from "payload/types/hooks";
 
 import address from "../fields/address";
 import cuisine from "../fields/cuisine";
@@ -8,12 +9,41 @@ import review from "../fields/review";
 import memberStatus from "../fields/memberStatus";
 import notes from "../fields/notes";
 
-import {hasAccessOrPublished} from "../access/hasAccessOrPublished";
-import {isAdmin} from "../access/isAdmin";
-import {isEditor} from "../access/isEditor";
 import catchPhrase from "../fields/catchPhrase";
 import occasion from "../fields/type";
 import openingHours from "../fields/openingHours";
+
+const updateCuisineActiveStatus: FieldHook = async ({ data, req }) => {
+    if (data && data.contentStatus && data.contentStatus === 'published') {
+        // Fetch related cuisines
+        const relatedCuisines = data.cuisines;  // assuming 'cuisines' is a field name that holds the relation
+
+        if (relatedCuisines && relatedCuisines.length > 0) {
+            for (const cuisineId of relatedCuisines) {
+
+                // Retrieve cuisine document by ID
+                const cuisine = await req.payload.findByID({
+                    collection: 'cuisine',
+                    id: cuisineId,
+                });
+
+                if (cuisine) {
+                    // Update active field
+                    await req.payload.update({
+                        collection: 'cuisine',
+                        id: cuisineId,
+                        data: {
+                            ...cuisine,
+                            active: true
+                        }
+                    });
+                }
+            }
+        }
+    }
+
+    return data;
+};
 
 const Venues:CollectionConfig = {
     slug: "venue",
@@ -33,10 +63,10 @@ const Venues:CollectionConfig = {
         useAsTitle: "venueName"
     },
     access: {
-        read: ()=>true,
-        create: ()=>true,
-        update: ()=>true,
-        delete: ()=>true
+        read: ()=> true,
+        create: ()=> true,
+        update: ()=> true,
+        delete: ()=> true
     },
     fields: [
         {
@@ -59,7 +89,26 @@ const Venues:CollectionConfig = {
         {
             type: "row",
             fields: [
-                cuisine,
+                {
+                    name: "cuisineUsed",
+                    label: {
+                        en: "cuisine(s)",
+                        fr: "cuisine(s)",
+                        nl: "keuken(s)"
+                    },
+                    admin: {
+                        description: {
+                            en:"pick the appropriate cuisine or cuisines served at this restaurant/venue",
+                            fr:"choisir la ou les cuisine(s) appropriée(s) servie(s) dans ce restaurant/lieu",
+                            nl:"selecteer de juiste keuken of keukens die in dit restaurant/op deze locatie worden geserveerd"
+                        },
+                    },
+                    type: "relationship",
+                    hasMany: true,
+                    relationTo: "cuisine",
+                    required: false,
+                    hooks: [updateCuisineActiveStatus]
+                },
                 {
                     name: "drinks",
                     label: {
