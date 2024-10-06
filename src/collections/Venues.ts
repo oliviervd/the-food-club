@@ -13,7 +13,7 @@ import catchPhrase from "../fields/catchPhrase";
 import occasion from "../fields/type";
 import openingHours from "../fields/openingHours";
 
-const updateCuisineActiveStatus: FieldHook = async ({ data, req }) => {
+/*const updateCuisineActiveStatus: FieldHook = async ({ data, req }) => {
     if (data && data.contentStatus && data.contentStatus === 'published') {
         // Fetch related cuisines
         const relatedCuisines = data.cuisines;  // assuming 'cuisines' is a field name that holds the relation
@@ -43,7 +43,7 @@ const updateCuisineActiveStatus: FieldHook = async ({ data, req }) => {
     }
 
     return data;
-};
+};*/
 
 const Venues:CollectionConfig = {
     slug: "venue",
@@ -107,7 +107,7 @@ const Venues:CollectionConfig = {
                     hasMany: true,
                     relationTo: "cuisine",
                     required: false,
-                    hooks: [updateCuisineActiveStatus]
+                    //hooks: [updateCuisineActiveStatus]
                 },
                 {
                     name: "drinks",
