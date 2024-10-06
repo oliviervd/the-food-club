@@ -1,8 +1,6 @@
 import {CollectionConfig} from "payload/types";
-import {FieldHook} from "payload/types/hooks";
 
 import address from "../fields/address";
-import cuisine from "../fields/cuisine";
 import contentStatus from "../fields/contentStatus";
 import pricing from "../fields/pricing";
 import review from "../fields/review";
@@ -12,38 +10,6 @@ import notes from "../fields/notes";
 import catchPhrase from "../fields/catchPhrase";
 import occasion from "../fields/type";
 import openingHours from "../fields/openingHours";
-
-/*const updateCuisineActiveStatus: FieldHook = async ({ data, req }) => {
-    if (data && data.contentStatus && data.contentStatus === 'published') {
-        // Fetch related cuisines
-        const relatedCuisines = data.cuisines;  // assuming 'cuisines' is a field name that holds the relation
-
-        if (relatedCuisines && relatedCuisines.length > 0) {
-            for (const cuisineId of relatedCuisines) {
-
-                // Retrieve cuisine document by ID
-                const cuisine = await req.payload.findByID({
-                    collection: 'cuisine',
-                    id: cuisineId,
-                });
-
-                if (cuisine) {
-                    // Update active field
-                    await req.payload.update({
-                        collection: 'cuisine',
-                        id: cuisineId,
-                        data: {
-                            ...cuisine,
-                            active: true
-                        }
-                    });
-                }
-            }
-        }
-    }
-
-    return data;
-};*/
 
 const Venues:CollectionConfig = {
     slug: "venue",
@@ -107,7 +73,6 @@ const Venues:CollectionConfig = {
                     hasMany: true,
                     relationTo: "cuisine",
                     required: false,
-                    //hooks: [updateCuisineActiveStatus]
                 },
                 {
                     name: "drinks",
