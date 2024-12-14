@@ -6,6 +6,7 @@ import pricing from "../fields/pricing";
 import review from "../fields/review";
 import memberStatus from "../fields/memberStatus";
 import notes from "../fields/notes";
+import {seoFields} from "../fields/SEO";
 
 import catchPhrase from "../fields/catchPhrase";
 import occasion from "../fields/type";
@@ -282,7 +283,8 @@ const Venues:CollectionConfig = {
                 }
             }
         },
-        notes
+        notes,
+        seoFields
     ]
 }
 export default Venues
