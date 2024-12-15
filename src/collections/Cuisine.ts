@@ -69,6 +69,22 @@ const Cuisine: CollectionConfig = {
                         fr: "plat"
                     },
                     value: "dish"
+                },
+                {
+                    label: {
+                        en: "shop",
+                        fr: "shop",
+                        nl: "shop"
+                    },
+                    value: "shop"
+                },
+                {
+                    label: {
+                        en: "style",
+                        fr: "style",
+                        nl: "style"
+                    },
+                    value: "style"
                 }
             ]
         },
