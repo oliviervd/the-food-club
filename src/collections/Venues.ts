@@ -11,6 +11,7 @@ import {seoFields} from "../fields/SEO";
 import catchPhrase from "../fields/catchPhrase";
 import occasion from "../fields/type";
 import openingHours from "../fields/openingHours";
+import {tabs} from "payload/dist/fields/config/schema";
 
 const Venues:CollectionConfig = {
     slug: "venue",
