@@ -219,6 +219,16 @@ const Venues:CollectionConfig = {
         contentStatus,
         memberStatus,
         {
+            name: 'take-away',
+            label: 'take-away',
+            type: "checkbox",
+            defaultValue: false,
+            admin: {
+                position: "sidebar",
+                description: "tick if take-away possible."
+            }
+        },
+        {
             name: 'vegetarian',
             label: {
                 en: "vegetarian friendly?",
