@@ -219,7 +219,7 @@ const Venues:CollectionConfig = {
         contentStatus,
         memberStatus,
         {
-            name: 'take-away',
+            name: 'takeAway',
             label: 'take-away',
             type: "checkbox",
             defaultValue: false,
