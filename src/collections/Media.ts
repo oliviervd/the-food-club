@@ -62,6 +62,7 @@ const Media: CollectionConfig = {
     },
     notes,
   ],
+  /*
   hooks: {
     beforeChange: [
       async ({ data, file }) => {
@@ -104,6 +105,7 @@ const Media: CollectionConfig = {
       },
     ],
   },
+  */
 };
 
 export default Media;
