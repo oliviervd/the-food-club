@@ -38,48 +38,6 @@ const Media: CollectionConfig = {
         height: undefined,
       },
     ],
-    hooks: {
-      beforeChange: [
-        async ({ data, file }) => {
-          // Check MIME type to ensure the uploaded file is an image
-          if (!file.mimetype.startsWith("image/")) return;
-
-          // Process the image using sharp
-          const buffer = await sharp(file.buffer)
-              .raw()
-              .ensureAlpha()
-              .toBuffer({ resolveWithObject: true });
-
-          const { data: rawPixels, info } = buffer;
-
-          const imageData = {
-            width: info.width,
-            height: info.height,
-            data: rawPixels,
-          };
-
-          // Apply Floyd-Steinberg dithering
-          const ditheredImage = floydSteinbergDither(imageData);
-
-          // Re-encode the dithered image to a valid PNG buffer using sharp
-          const finalBuffer = await sharp(
-              Buffer.from(ditheredImage.data.buffer),
-              {
-                raw: {
-                  width: ditheredImage.width,
-                  height: ditheredImage.height,
-                  channels: 4,
-                },
-              }
-          )
-              .toFormat("png")
-              .toBuffer();
-
-          // Replace the original file buffer with the processed dithered image buffer
-          file.buffer = finalBuffer;
-        },
-      ],
-    },
   },
   access: {
     read: () => true,
@@ -104,6 +62,48 @@ const Media: CollectionConfig = {
     },
     notes,
   ],
+  hooks: {
+    beforeChange: [
+      async ({ data, file }) => {
+        // Check MIME type to ensure the uploaded file is an image
+        if (!file.mimetype.startsWith("image/")) return;
+
+        // Process the image using sharp
+        const buffer = await sharp(file.buffer)
+            .raw()
+            .ensureAlpha()
+            .toBuffer({ resolveWithObject: true });
+
+        const { data: rawPixels, info } = buffer;
+
+        const imageData = {
+          width: info.width,
+          height: info.height,
+          data: rawPixels,
+        };
+
+        // Apply Floyd-Steinberg dithering
+        const ditheredImage = floydSteinbergDither(imageData);
+
+        // Re-encode the dithered image to a valid PNG buffer using sharp
+        const finalBuffer = await sharp(
+            Buffer.from(ditheredImage.data.buffer),
+            {
+              raw: {
+                width: ditheredImage.width,
+                height: ditheredImage.height,
+                channels: 4,
+              },
+            }
+        )
+            .toFormat("png")
+            .toBuffer();
+
+        // Replace the original file buffer with the processed dithered image buffer
+        file.buffer = finalBuffer;
+      },
+    ],
+  },
 };
 
 export default Media;
