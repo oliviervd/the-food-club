@@ -87,6 +87,7 @@ export default buildConfig({
     "http://localhost:3000",
     "https://p01--cms--j4bvc8vdjtjb.code.run/",
     "vitals.vercel-insights.com",
+    "https://www.thefoodclub.be"
   ],
   //CSRF
   csrf: [
@@ -94,6 +95,7 @@ export default buildConfig({
     "http://localhost:3000",
     "https://p01--cms--j4bvc8vdjtjb.code.run/",
     "vitals.vercel-insights.com",
+    "https://www.thefoodclub.be"
   ],
   collections: [Users, Venues, Categories, Cuisine, Designer, Media, Lists, Globals],
   typescript: {
