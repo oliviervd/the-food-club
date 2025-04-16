@@ -213,7 +213,8 @@ const Venues:CollectionConfig = {
             label: "URL",
             type: "text",
             admin: {
-                position: "sidebar"
+                position: "sidebar",
+                description: "NO SPACES! USE '-' INSTEAD. - example: 'antwerp-brussel' or 'gent-brussel'."
             }
         },
         contentStatus,
