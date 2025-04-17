@@ -220,6 +220,16 @@ const Venues:CollectionConfig = {
         contentStatus,
         memberStatus,
         {
+          name: 'new',
+          label: 'new',
+          type: "checkbox",
+          defaultValue: false,
+          admin: {
+              position: "sidebar",
+              description: 'tick to highlight this venue as new. - will be removed after a while.'
+          }
+        },
+        {
             name: 'takeAway',
             label: 'take-away',
             type: "checkbox",
