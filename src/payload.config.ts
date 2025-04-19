@@ -1,4 +1,4 @@
-import { buildConfig } from "payload/config";
+import { buildConfig } from 'payload'
 import { cloudStorage } from "@payloadcms/plugin-cloud-storage";
 import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
@@ -16,11 +16,10 @@ import Lists from "./collections/Navigation";
 import Globals from "./collections/Globals";
 
 export default buildConfig({
-  //
   serverURL: process.env.PAYLOAD_URL,
+  secret: process.env.PAYLOAD_SECRET,
   admin: {
-    user: Users.slug,
-    bundler: webpackBundler(),
+    user: Users.slug
   },
   editor: slateEditor({}),
   plugins: [
