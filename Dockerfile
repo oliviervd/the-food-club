@@ -1,5 +1,6 @@
-FROM node:20.11 as base
+FROM node:18.20.2 as base
 
+# Your other steps go here
 FROM base as builder
 
 WORKDIR /home/node/app
