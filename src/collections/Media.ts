@@ -1,7 +1,5 @@
-import { CollectionConfig } from "payload/types";
+import type {CollectionConfig} from "payload";
 import notes from "../fields/notes";
-import sharp from "sharp";
-import { floydSteinbergDither } from "../utils/floydSteinberg"; // Adjust the path as per your directory structure
 
 const Media: CollectionConfig = {
   slug: "media",
@@ -9,7 +7,7 @@ const Media: CollectionConfig = {
     useAsTitle: "title",
   },
   upload: {
-    staticURL: "/media",
+    //staticURL: "/media",
     staticDir: "media",
     disableLocalStorage: true,
     imageSizes: [

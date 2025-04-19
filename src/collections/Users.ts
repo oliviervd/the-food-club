@@ -1,4 +1,4 @@
-import { CollectionConfig } from 'payload/types';
+import type {CollectionConfig} from "payload";
 import {isAdmin, isAdminFieldLevel} from "../access/isAdmin";
 import {isAdminOrSelf} from "../access/isAdminOrSelf";
 

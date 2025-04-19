@@ -1,6 +1,4 @@
-import {Field} from "payload/types";
-import {isAdminFieldLevel} from "../access/isAdmin";
-import {isEditor} from "../access/isEditor";
+import {Field} from "payload";
 
 const notes:Field = {
     access: {
