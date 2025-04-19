@@ -1,4 +1,4 @@
-import {CollectionConfig} from "payload/types";
+import type {CollectionConfig} from "payload";
 
 import address from "../fields/address";
 import contentStatus from "../fields/contentStatus";
@@ -11,9 +11,8 @@ import {seoFields} from "../fields/SEO";
 import catchPhrase from "../fields/catchPhrase";
 import occasion from "../fields/type";
 import openingHours from "../fields/openingHours";
-import {tabs} from "payload/dist/fields/config/schema";
 
-const Venues:CollectionConfig = {
+export const Venues:CollectionConfig = {
     slug: "venue",
     labels: {
         singular: {
@@ -307,6 +306,28 @@ const Venues:CollectionConfig = {
         },
         notes,
         seoFields
+    ],
+    endpoints: [
+        /*
+        // endpoint for SEO
+        {
+            path: "venues/:url/seo",
+            method: "get",
+            handler: async (req) => {
+
+            }
+
+        },
+        // endpoint containing all data
+        {
+            path: "venues/:url",
+            method: "get",
+            handler: async (req) => {
+                return "test"
+            }
+        }
+
+        */
     ]
 }
 export default Venues

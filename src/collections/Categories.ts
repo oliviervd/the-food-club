@@ -1,5 +1,4 @@
-import { CollectionConfig } from "payload/types";
-import contentStatus from "../fields/contentStatus";
+import type {CollectionConfig} from "payload";
 import notes from "../fields/notes";
 
 const Categories: CollectionConfig = {
