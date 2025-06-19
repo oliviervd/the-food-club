@@ -238,6 +238,19 @@ export const Venues:CollectionConfig = {
                 description: "tick if take-away possible."
             }
         },
+
+        {
+            name: "terrace",
+            label: "terrace",
+            type: "checkbox",
+            admin: {
+                position: "sidebar",
+                description: {
+                    en: "this venue has an outdoor terrace",
+                }
+            },
+        },
+
         {
             name: 'vegetarian',
             label: {
